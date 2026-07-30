@@ -205,7 +205,7 @@ button {
   position: absolute;
   inset: 0;
   background-image: url("assets/2026-champions-original.jpg");
-  background-position: center;
+  background-position: center 72%;
   background-size: cover;
   transform: scale(1.01);
 }
