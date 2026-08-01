@@ -24,7 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260801-2" />
+    <link rel="stylesheet" href="styles.css?v=20260801-3" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -51,6 +51,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="#season">2026 Season</a>
         <a href="#roster">Roster</a>
+        <a href="#gallery">Gallery</a>
         <a href="#rules">Rules</a>
         <a href="#history">History</a>
         <a href="#sponsor">Sponsor</a>
@@ -260,9 +261,56 @@
         </div>
       </section>
 
+      <section id="gallery" class="section gallery-section" aria-labelledby="gallery-title">
+        <div class="section-heading split-heading">
+          <div>
+            <span class="section-number">04</span>
+            <p class="eyebrow">From the archive</p>
+            <h2 id="gallery-title">Team gallery</h2>
+          </div>
+          <p class="lead light">
+            Original team photos preserved from the old Softball Beers site.
+          </p>
+        </div>
+
+        <div class="gallery" aria-roledescription="carousel" aria-label="Boathouse Beers team photos">
+          <div class="gallery-stage" aria-live="polite">
+            <figure class="gallery-slide is-active" data-slide aria-hidden="false">
+              <img
+                src="assets/2026-champions-original.jpg"
+                alt="The Boathouse Beers team celebrating their 2026 championship on the softball field"
+              />
+              <figcaption>2026 champions</figcaption>
+            </figure>
+            <figure class="gallery-slide" data-slide aria-hidden="true">
+              <img
+                src="assets/gallery/team-black-jerseys.jpg"
+                alt="The Boathouse Beers team posing together on the softball field in black jerseys"
+                loading="lazy"
+              />
+              <figcaption>From the team archive</figcaption>
+            </figure>
+          </div>
+
+          <div class="gallery-controls">
+            <button class="gallery-arrow" type="button" data-gallery-prev aria-label="Previous team photo">
+              <span aria-hidden="true">&#8592;</span>
+            </button>
+            <div class="gallery-dots" aria-label="Choose a team photo">
+              <button class="is-active" type="button" data-gallery-dot="0" aria-label="Show photo 1" aria-current="true"></button>
+              <button type="button" data-gallery-dot="1" aria-label="Show photo 2"></button>
+            </div>
+            <p class="gallery-count" aria-hidden="true"><span data-gallery-current>1</span> / 2</p>
+            <button class="gallery-arrow" type="button" data-gallery-next aria-label="Next team photo">
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       <section id="rules" class="section rules-section">
         <div class="section-heading">
-          <span class="section-number">04</span>
+          <span class="section-number">05</span>
           <p class="eyebrow dark">Know the game</p>
           <h2>Team &amp; league rules</h2>
         </div>
@@ -333,7 +381,7 @@
       <section id="history" class="section section-red">
         <div class="section-heading split-heading">
           <div>
-            <span class="section-number">05</span>
+            <span class="section-number">06</span>
             <p class="eyebrow">Built since 2023</p>
             <h2>Team history</h2>
           </div>
@@ -406,7 +454,7 @@
 
       <section class="section banquet-section">
         <div class="section-heading">
-          <span class="section-number">06</span>
+          <span class="section-number">07</span>
           <p class="eyebrow dark">Off the field</p>
           <h2>Beers banquets</h2>
         </div>
@@ -472,7 +520,7 @@
       <section id="shop" class="section shop-section">
         <div class="section-heading split-heading">
           <div>
-            <span class="section-number">07</span>
+            <span class="section-number">08</span>
             <p class="eyebrow dark">Gear up</p>
             <h2>Team shop &amp; partners</h2>
           </div>
@@ -609,7 +657,6 @@
       <p>These terms and this privacy notice may be updated by posting changes here.</p>
     </dialog>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260801-1"></script>
   </body>
 </html>
-

@@ -657,6 +657,111 @@ button {
   font-weight: 600;
 }
 
+.gallery-section {
+  color: white;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(48, 146, 255, 0.2), transparent 34%),
+    var(--navy-950);
+}
+
+.gallery {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.gallery-stage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--navy-900);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 450ms ease;
+}
+
+.gallery-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #020912;
+}
+
+.gallery-slide figcaption {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.65rem 0.8rem;
+  color: white;
+  background: rgba(4, 11, 20, 0.82);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gallery-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.gallery-arrow {
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.35rem;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.gallery-arrow:hover,
+.gallery-arrow:focus-visible {
+  border-color: var(--red);
+  background: var(--red);
+}
+
+.gallery-dots {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.gallery-dots button {
+  width: 38px;
+  height: 5px;
+  padding: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.gallery-dots button.is-active {
+  background: var(--red);
+}
+
+.gallery-count {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font: 800 0.72rem/1 var(--body);
+  letter-spacing: 0.1em;
+}
+
 .rules-section {
   background: white;
 }
@@ -1350,6 +1455,22 @@ button {
     font-size: 0.76rem;
   }
 
+  .gallery-stage {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery-controls {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .gallery-count {
+    display: none;
+  }
+
+  .gallery-dots {
+    justify-content: center;
+  }
+
   .history-grid,
   .archive-content,
   .banquet-grid {
@@ -1418,4 +1539,3 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
-
