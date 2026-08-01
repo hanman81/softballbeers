@@ -605,23 +605,51 @@ button {
   background: var(--cream);
 }
 
-.roster-board {
-  margin-top: 0;
-  margin-bottom: 0;
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.roster-board img {
-  width: 100%;
-  max-height: 880px;
-  object-fit: contain;
-  background: white;
-  box-shadow: var(--shadow);
+.player-card {
+  min-height: 132px;
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 12px 30px rgba(3, 13, 26, 0.08);
 }
 
-.roster-board figcaption {
-  margin-top: 1rem;
+.jersey-number {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--navy-900);
+  font: 900 3rem/1 var(--display);
+  letter-spacing: 0.02em;
+}
+
+.player-card div {
+  padding: 1.25rem 1.5rem;
+}
+
+.player-card h3 {
+  margin: 0;
+  font: 800 clamp(1.55rem, 3vw, 2.15rem) / 1 var(--display);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.player-card p {
+  margin: 0.45rem 0 0;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .rules-section {
@@ -1293,6 +1321,23 @@ button {
     margin-left: 0;
   }
 
+  .roster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .player-card {
+    min-height: 108px;
+    grid-template-columns: 82px 1fr;
+  }
+
+  .jersey-number {
+    font-size: 2.35rem;
+  }
+
+  .player-card div {
+    padding: 1rem 1.15rem;
+  }
+
   .history-grid,
   .archive-content,
   .banquet-grid {
@@ -1361,3 +1406,4 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
