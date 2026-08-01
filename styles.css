@@ -605,51 +605,56 @@ button {
   background: var(--cream);
 }
 
-.roster-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.player-card {
-  min-height: 132px;
-  display: grid;
-  grid-template-columns: 104px 1fr;
-  align-items: center;
-  overflow: hidden;
+.roster-table-wrap {
+  overflow-x: auto;
   border: 1px solid var(--line);
   background: var(--paper);
   box-shadow: 0 12px 30px rgba(3, 13, 26, 0.08);
 }
 
-.jersey-number {
-  height: 100%;
-  display: grid;
-  place-items: center;
-  color: white;
-  background: var(--navy-900);
-  font: 900 3rem/1 var(--display);
-  letter-spacing: 0.02em;
+.roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
 }
 
-.player-card div {
+.roster-table th,
+.roster-table td {
   padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line);
 }
 
-.player-card h3 {
-  margin: 0;
-  font: 800 clamp(1.55rem, 3vw, 2.15rem) / 1 var(--display);
+.roster-table thead th {
+  color: rgba(255, 255, 255, 0.68);
+  background: var(--navy-900);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.roster-table tbody tr:last-child th,
+.roster-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.roster-table tbody td:first-child {
+  width: 120px;
+  color: var(--red);
+  font: 900 2rem/1 var(--display);
+}
+
+.roster-table tbody th {
+  width: 44%;
+  font: 800 clamp(1.3rem, 3vw, 1.75rem) / 1 var(--display);
   letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 
-.player-card p {
-  margin: 0.45rem 0 0;
+.roster-table tbody td:last-child {
   color: var(--muted);
   font-size: 0.86rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .rules-section {
@@ -1321,21 +1326,28 @@ button {
     margin-left: 0;
   }
 
-  .roster-grid {
-    grid-template-columns: 1fr;
+  .roster-table th,
+  .roster-table td {
+    padding: 1rem 0.75rem;
   }
 
-  .player-card {
-    min-height: 108px;
-    grid-template-columns: 82px 1fr;
+  .roster-table thead th {
+    font-size: 0.62rem;
+    letter-spacing: 0.07em;
   }
 
-  .jersey-number {
-    font-size: 2.35rem;
+  .roster-table tbody td:first-child {
+    width: 66px;
+    font-size: 1.65rem;
   }
 
-  .player-card div {
-    padding: 1rem 1.15rem;
+  .roster-table tbody th {
+    width: 43%;
+    font-size: 1.18rem;
+  }
+
+  .roster-table tbody td:last-child {
+    font-size: 0.76rem;
   }
 
   .history-grid,
