@@ -118,9 +118,15 @@ button {
   color: white;
   background: var(--red);
   border-radius: 50%;
-  font: 800 1.1rem/1 var(--display);
-  letter-spacing: 0.04em;
   transform: rotate(-5deg);
+}
+
+.brand-mark img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgba(4, 11, 20, 0.35));
+  transform: rotate(5deg);
 }
 
 .brand strong,
