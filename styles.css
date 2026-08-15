@@ -1509,26 +1509,37 @@ button {
   }
 
   .hero {
-    min-height: 780px;
-    align-items: end;
+    display: block;
+    min-height: 0;
+    padding-top: min(133.333vw, 62svh);
   }
 
   .hero-image {
-    background-position: 58% center;
+    inset: 0 0 auto;
+    height: min(133.333vw, 62svh);
+    background-color: var(--navy-950);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: none;
   }
 
   .hero-overlay {
+    inset: 0 0 auto;
+    height: min(133.333vw, 62svh);
     background:
-      linear-gradient(0deg, rgba(4, 11, 20, 0.98) 0%, rgba(4, 11, 20, 0.62) 48%, rgba(4, 11, 20, 0.2) 100%);
+      linear-gradient(180deg, rgba(4, 11, 20, 0.7) 0%, transparent 24%),
+      linear-gradient(0deg, var(--navy-950) 0%, transparent 22%);
   }
 
   .hero-content {
     width: calc(100% - 2rem);
-    padding: 9rem 0 5.5rem;
+    padding: 1.25rem 0 3.5rem;
   }
 
   .hero h1 {
-    font-size: clamp(4.2rem, 23vw, 7rem);
+    font-size: clamp(4rem, 19vw, 6.2rem);
+    line-height: 0.76;
   }
 
   .scroll-cue {
@@ -1693,3 +1704,4 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
