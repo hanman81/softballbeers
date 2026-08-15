@@ -478,6 +478,134 @@ button {
   color: var(--gold);
 }
 
+.schedule-section {
+  background: var(--cream);
+}
+
+.schedule-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.schedule-summary div {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.35rem;
+  border-right: 1px solid var(--line);
+}
+
+.schedule-summary div:last-child {
+  border-right: 0;
+}
+
+.schedule-summary strong {
+  color: var(--red);
+  font: 900 2.4rem/1 var(--display);
+}
+
+.schedule-summary span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.schedule-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 12px 30px rgba(3, 13, 26, 0.08);
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.schedule-table thead th {
+  color: white;
+  background: var(--navy-900);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.schedule-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.schedule-table tbody td:first-child {
+  color: var(--red);
+  font: 800 1.3rem/1 var(--display);
+}
+
+.schedule-table tbody th {
+  font-weight: 700;
+}
+
+.schedule-table .bye-row {
+  color: var(--muted);
+  background: rgba(16, 24, 32, 0.035);
+}
+
+.venue-tag {
+  display: inline-block;
+  min-width: 50px;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.4rem;
+  color: white;
+  background: var(--navy-800);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.venue-tag.home {
+  background: var(--red);
+}
+
+.playoff-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding: 2rem;
+  color: white;
+  background: var(--navy-900);
+}
+
+.playoff-callout h3 {
+  margin: 0.4rem 0;
+  font: 800 2rem/1 var(--display);
+  text-transform: uppercase;
+}
+
+.playoff-callout p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.playoff-callout .button {
+  flex: 0 0 auto;
+}
+
 .section-dark {
   color: white;
   background:
@@ -1311,6 +1439,11 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .playoff-callout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .stat-cards {
     grid-template-columns: 1fr;
   }
@@ -1420,6 +1553,21 @@ button {
 
   .recap-card {
     min-height: 350px;
+    padding: 1.5rem;
+  }
+
+  .schedule-summary div {
+    align-items: center;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .schedule-summary strong {
+    font-size: 2rem;
+  }
+
+  .playoff-callout {
     padding: 1.5rem;
   }
 
