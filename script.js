@@ -48,6 +48,34 @@ legalDialog.addEventListener("click", (event) => {
 const gallery = document.querySelector(".gallery");
 
 if (gallery) {
+  const galleryStage = gallery.querySelector(".gallery-stage");
+  const galleryDots = gallery.querySelector(".gallery-dots");
+  const galleryCount = gallery.querySelector(".gallery-count");
+
+  const celebrationSlide = document.createElement("figure");
+  celebrationSlide.className = "gallery-slide";
+  celebrationSlide.dataset.slide = "";
+  celebrationSlide.setAttribute("aria-hidden", "true");
+  celebrationSlide.innerHTML = `
+    <img
+      src="assets/gallery/2026-championship-celebration-bar.jpg"
+      alt="The Boathouse Beers team celebrating together at the bar after winning the 2026 championship"
+      loading="lazy"
+    />
+    <figcaption>Championship celebration</figcaption>
+  `;
+  galleryStage.appendChild(celebrationSlide);
+
+  const celebrationDot = document.createElement("button");
+  celebrationDot.type = "button";
+  celebrationDot.dataset.galleryDot = "2";
+  celebrationDot.setAttribute("aria-label", "Show photo 3");
+  galleryDots.appendChild(celebrationDot);
+
+  if (galleryCount) {
+    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 3';
+  }
+
   const slides = Array.from(gallery.querySelectorAll("[data-slide]"));
   const dots = Array.from(gallery.querySelectorAll("[data-gallery-dot]"));
   const currentLabel = gallery.querySelector("[data-gallery-current]");
