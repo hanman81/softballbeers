@@ -204,4 +204,18 @@ if (gallery) {
   startAutoplay();
 }
 
+const cavalierBanquetCard = document.querySelector(".banquet-card.banquet-latest");
+if (cavalierBanquetCard && !cavalierBanquetCard.querySelector("img")) {
+  const banquetPhoto = document.createElement("img");
+  banquetPhoto.src = "assets/gallery/2025-season-banquet-cavalier.jpg";
+  banquetPhoto.alt = "Boathouse Beers teammates together after dinner at The Cavalier in San Francisco for the 2025 season banquet";
+  banquetPhoto.loading = "lazy";
+  banquetPhoto.style.width = "100%";
+  banquetPhoto.style.aspectRatio = "4 / 3";
+  banquetPhoto.style.objectFit = "cover";
+  banquetPhoto.style.borderRadius = "14px";
+  banquetPhoto.style.marginBottom = "1rem";
+  cavalierBanquetCard.prepend(banquetPhoto);
+}
+
 document.querySelector("#year").textContent = new Date().getFullYear();
