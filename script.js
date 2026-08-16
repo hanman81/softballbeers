@@ -132,8 +132,28 @@ if (gallery) {
   summerBanquetDot.setAttribute("aria-label", "Show photo 6");
   galleryDots.appendChild(summerBanquetDot);
 
+  const topgolf2024Slide = document.createElement("figure");
+  topgolf2024Slide.className = "gallery-slide";
+  topgolf2024Slide.dataset.slide = "";
+  topgolf2024Slide.setAttribute("aria-hidden", "true");
+  topgolf2024Slide.innerHTML = `
+    <img
+      src="assets/gallery/2024-banquet-topgolf.jpg"
+      alt="Boathouse Beers teammates and friends together at Topgolf for the 2024 team banquet"
+      loading="lazy"
+    />
+    <figcaption>2024 banquet · Topgolf</figcaption>
+  `;
+  galleryStage.appendChild(topgolf2024Slide);
+
+  const topgolf2024Dot = document.createElement("button");
+  topgolf2024Dot.type = "button";
+  topgolf2024Dot.dataset.galleryDot = "6";
+  topgolf2024Dot.setAttribute("aria-label", "Show photo 7");
+  galleryDots.appendChild(topgolf2024Dot);
+
   if (galleryCount) {
-    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 6';
+    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 7';
   }
 
   const slides = Array.from(gallery.querySelectorAll("[data-slide]"));
