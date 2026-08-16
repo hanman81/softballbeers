@@ -72,8 +72,28 @@ if (gallery) {
   celebrationDot.setAttribute("aria-label", "Show photo 3");
   galleryDots.appendChild(celebrationDot);
 
+  const fall2025Slide = document.createElement("figure");
+  fall2025Slide.className = "gallery-slide";
+  fall2025Slide.dataset.slide = "";
+  fall2025Slide.setAttribute("aria-hidden", "true");
+  fall2025Slide.innerHTML = `
+    <img
+      src="assets/gallery/fall-2025-team-photo.jpg"
+      alt="The Boathouse Beers Fall 2025 team posing together in matching jerseys"
+      loading="lazy"
+    />
+    <figcaption>Fall 2025 team</figcaption>
+  `;
+  galleryStage.appendChild(fall2025Slide);
+
+  const fall2025Dot = document.createElement("button");
+  fall2025Dot.type = "button";
+  fall2025Dot.dataset.galleryDot = "3";
+  fall2025Dot.setAttribute("aria-label", "Show photo 4");
+  galleryDots.appendChild(fall2025Dot);
+
   if (galleryCount) {
-    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 3';
+    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 4';
   }
 
   const slides = Array.from(gallery.querySelectorAll("[data-slide]"));
