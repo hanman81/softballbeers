@@ -112,8 +112,28 @@ if (gallery) {
   banquet2025Dot.setAttribute("aria-label", "Show photo 5");
   galleryDots.appendChild(banquet2025Dot);
 
+  const summerBanquetSlide = document.createElement("figure");
+  summerBanquetSlide.className = "gallery-slide";
+  summerBanquetSlide.dataset.slide = "";
+  summerBanquetSlide.setAttribute("aria-hidden", "true");
+  summerBanquetSlide.innerHTML = `
+    <img
+      src="assets/gallery/2025-summer-banquet.svg"
+      alt="Boathouse Beers teammates and friends gathered outdoors at night during the 2025 summer banquet"
+      loading="lazy"
+    />
+    <figcaption>Summer 2025 banquet</figcaption>
+  `;
+  galleryStage.appendChild(summerBanquetSlide);
+
+  const summerBanquetDot = document.createElement("button");
+  summerBanquetDot.type = "button";
+  summerBanquetDot.dataset.galleryDot = "5";
+  summerBanquetDot.setAttribute("aria-label", "Show photo 6");
+  galleryDots.appendChild(summerBanquetDot);
+
   if (galleryCount) {
-    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 5';
+    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 6';
   }
 
   const slides = Array.from(gallery.querySelectorAll("[data-slide]"));
