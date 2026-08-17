@@ -152,8 +152,28 @@ if (gallery) {
   topgolf2024Dot.setAttribute("aria-label", "Show photo 7");
   galleryDots.appendChild(topgolf2024Dot);
 
+  const banquet2023Slide = document.createElement("figure");
+  banquet2023Slide.className = "gallery-slide";
+  banquet2023Slide.dataset.slide = "";
+  banquet2023Slide.setAttribute("aria-hidden", "true");
+  banquet2023Slide.innerHTML = `
+    <img
+      src="assets/gallery/2023-first-season-banquet.svg"
+      alt="Boathouse Beers teammates together at the 2023 banquet after the team's first season"
+      loading="lazy"
+    />
+    <figcaption>2023 banquet · After our first season</figcaption>
+  `;
+  galleryStage.appendChild(banquet2023Slide);
+
+  const banquet2023Dot = document.createElement("button");
+  banquet2023Dot.type = "button";
+  banquet2023Dot.dataset.galleryDot = "7";
+  banquet2023Dot.setAttribute("aria-label", "Show photo 8");
+  galleryDots.appendChild(banquet2023Dot);
+
   if (galleryCount) {
-    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 7';
+    galleryCount.innerHTML = '<span data-gallery-current>1</span> / 8';
   }
 
   const slides = Array.from(gallery.querySelectorAll("[data-slide]"));
@@ -252,6 +272,22 @@ if (topgolfBanquetCard && !topgolfBanquetCard.querySelector("img")) {
   topgolfPhoto.style.borderRadius = "14px";
   topgolfPhoto.style.marginBottom = "1rem";
   topgolfBanquetCard.prepend(topgolfPhoto);
+}
+
+const firstSeasonBanquetCard = Array.from(document.querySelectorAll(".banquet-card")).find((card) =>
+  card.querySelector("h3")?.textContent.includes("Boathouse Tavern")
+);
+if (firstSeasonBanquetCard && !firstSeasonBanquetCard.querySelector("img")) {
+  const firstSeasonPhoto = document.createElement("img");
+  firstSeasonPhoto.src = "assets/gallery/2023-first-season-banquet.svg";
+  firstSeasonPhoto.alt = "Boathouse Beers teammates together at the 2023 banquet after the team's first season";
+  firstSeasonPhoto.loading = "lazy";
+  firstSeasonPhoto.style.width = "100%";
+  firstSeasonPhoto.style.aspectRatio = "4 / 3";
+  firstSeasonPhoto.style.objectFit = "cover";
+  firstSeasonPhoto.style.borderRadius = "14px";
+  firstSeasonPhoto.style.marginBottom = "1rem";
+  firstSeasonBanquetCard.prepend(firstSeasonPhoto);
 }
 
 document.querySelector("#year").textContent = new Date().getFullYear();
