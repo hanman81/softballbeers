@@ -59,6 +59,7 @@ if (gallery) {
     ["assets/gallery/2025-summer-banquet.svg", "Boathouse Beers teammates and friends gathered outdoors at night during the 2025 summer banquet", "Summer 2025 banquet"],
     ["assets/gallery/2024-banquet-topgolf.jpg", "Boathouse Beers teammates and friends together at Topgolf for the 2024 team banquet", "2024 banquet · Topgolf"],
     ["assets/gallery/2023-first-season-banquet.svg", "Boathouse Beers teammates together at the 2023 banquet after the team's first season", "2023 banquet · After our first season"],
+    ["assets/gallery/first-win-team.jpg", "The Boathouse Beers team posing together on the softball field after their first win", "After our first win"],
   ];
 
   galleryItems.forEach(([src, alt, caption], itemIndex) => {
