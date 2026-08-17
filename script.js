@@ -258,6 +258,22 @@ if (cavalierBanquetCard && !cavalierBanquetCard.querySelector("img")) {
   cavalierBanquetCard.prepend(banquetPhoto);
 }
 
+const coachBackyardBanquetCard = Array.from(document.querySelectorAll(".banquet-card")).find((card) =>
+  card.querySelector("h3")?.textContent.includes("Coach’s backyard")
+);
+if (coachBackyardBanquetCard && !coachBackyardBanquetCard.querySelector("img")) {
+  const coachBackyardPhoto = document.createElement("img");
+  coachBackyardPhoto.src = "assets/gallery/2025-summer-banquet.svg";
+  coachBackyardPhoto.alt = "Boathouse Beers teammates and friends gathered outdoors at night during the Summer 2025 banquet in the coach's backyard";
+  coachBackyardPhoto.loading = "lazy";
+  coachBackyardPhoto.style.width = "100%";
+  coachBackyardPhoto.style.aspectRatio = "4 / 3";
+  coachBackyardPhoto.style.objectFit = "cover";
+  coachBackyardPhoto.style.borderRadius = "14px";
+  coachBackyardPhoto.style.marginBottom = "1rem";
+  coachBackyardBanquetCard.prepend(coachBackyardPhoto);
+}
+
 const topgolfBanquetCard = Array.from(document.querySelectorAll(".banquet-card")).find((card) =>
   card.querySelector("h3")?.textContent.includes("Topgolf")
 );
