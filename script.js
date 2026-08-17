@@ -238,4 +238,20 @@ if (cavalierBanquetCard && !cavalierBanquetCard.querySelector("img")) {
   cavalierBanquetCard.prepend(banquetPhoto);
 }
 
+const topgolfBanquetCard = Array.from(document.querySelectorAll(".banquet-card")).find((card) =>
+  card.querySelector("h3")?.textContent.includes("Topgolf")
+);
+if (topgolfBanquetCard && !topgolfBanquetCard.querySelector("img")) {
+  const topgolfPhoto = document.createElement("img");
+  topgolfPhoto.src = "assets/gallery/2024-banquet-topgolf.jpg";
+  topgolfPhoto.alt = "Boathouse Beers teammates and friends together at Topgolf for the 2024 team banquet";
+  topgolfPhoto.loading = "lazy";
+  topgolfPhoto.style.width = "100%";
+  topgolfPhoto.style.aspectRatio = "4 / 3";
+  topgolfPhoto.style.objectFit = "cover";
+  topgolfPhoto.style.borderRadius = "14px";
+  topgolfPhoto.style.marginBottom = "1rem";
+  topgolfBanquetCard.prepend(topgolfPhoto);
+}
+
 document.querySelector("#year").textContent = new Date().getFullYear();
