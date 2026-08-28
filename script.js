@@ -39,10 +39,4 @@ if(heroSection&&!document.querySelector('[data-tonights-lineup]')){
  heroSection.insertAdjacentElement('afterend',section);
 }
 
-const scoreStrip=document.querySelector('.score-strip');
-if(scoreStrip){
- scoreStrip.setAttribute('aria-label','Fall 2026 season stats');
- scoreStrip.innerHTML='<div><strong style="font-size:1.65rem;">Fall 2026</strong><span>Season stats</span></div><div style="flex-wrap:wrap;"><strong>1</strong><span>Home run</span><small style="flex-basis:100%;text-align:center;font-size:.68rem;font-weight:700;letter-spacing:.04em;">Ryan Mendoza · 1</small></div><div><strong>0</strong><span>Strikeouts</span></div><div><strong>0</strong><span>Landed can flips</span></div>';
-}
-
 document.querySelector('#year').textContent=new Date().getFullYear();
