@@ -33,10 +33,16 @@ const heroSection=document.querySelector('.hero');
 if(heroSection&&!document.querySelector('[data-tonights-lineup]')){
  const section=document.createElement('section');
  section.dataset.tonightsLineup='';
- section.setAttribute('aria-label',"Tonight's lineup");
+ section.setAttribute('aria-label','Week 2 line-up');
  Object.assign(section.style,{background:'#071426',padding:'clamp(28px,5vw,64px) 20px',textAlign:'center',borderTop:'1px solid rgba(255,255,255,.08)',borderBottom:'1px solid rgba(255,255,255,.08)'});
- section.innerHTML='<div style="max-width:780px;margin:0 auto;"><p style="margin:0 0 8px;color:#e3262e;font-family:\'Barlow Condensed\',sans-serif;font-size:1rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;">Game Day · August 25</p><h2 style="margin:0 0 8px;color:#fff;font-family:\'Barlow Condensed\',sans-serif;font-size:clamp(2.2rem,7vw,4.25rem);line-height:.95;text-transform:uppercase;">Tonight\'s Lineup</h2><p style="margin:0 0 24px;color:#c7d0db;font-size:1rem;">Boathouse Beers vs. Misfits · 7:00 PM</p><img src="assets/lineup-2026-08-25.svg" alt="Boathouse Beers lineup for the August 25 game against the Misfits at 7:00 PM" style="display:block;width:min(100%,560px);height:auto;margin:0 auto;border-radius:16px;box-shadow:0 22px 55px rgba(0,0,0,.38);" /></div>';
+ section.innerHTML='<div style="max-width:780px;margin:0 auto;"><p style="margin:0 0 8px;color:#e3262e;font-family:\'Barlow Condensed\',sans-serif;font-size:1rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;">Game Day · August 25</p><h2 style="margin:0 0 8px;color:#fff;font-family:\'Barlow Condensed\',sans-serif;font-size:clamp(2.2rem,7vw,4.25rem);line-height:.95;text-transform:uppercase;">Week 2 Line-up</h2><p style="margin:0 0 24px;color:#c7d0db;font-size:1rem;">Boathouse Beers vs. Misfits · 7:00 PM</p><img src="assets/lineup-2026-08-25.svg?v=20260827-2" alt="Boathouse Beers Week 2 line-up for the August 25 game against the Misfits at 7:00 PM" style="display:block;width:min(100%,560px);height:auto;margin:0 auto;border-radius:16px;box-shadow:0 22px 55px rgba(0,0,0,.38);" /></div>';
  heroSection.insertAdjacentElement('afterend',section);
+}
+
+const scoreStrip=document.querySelector('.score-strip');
+if(scoreStrip){
+ scoreStrip.setAttribute('aria-label','Fall 2026 season stats');
+ scoreStrip.innerHTML='<div><strong style="font-size:1.65rem;">Fall 2026</strong><span>Season stats</span></div><div style="flex-wrap:wrap;"><strong>1</strong><span>Home run</span><small style="flex-basis:100%;text-align:center;font-size:.68rem;font-weight:700;letter-spacing:.04em;">Ryan Mendoza · 1</small></div><div><strong>0</strong><span>Strikeouts</span></div><div><strong>0</strong><span>Landed can flips</span></div>';
 }
 
 document.querySelector('#year').textContent=new Date().getFullYear();
