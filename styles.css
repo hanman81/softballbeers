@@ -2212,3 +2212,92 @@ button {
   }
 }
 
+/* Enhanced official scorebook photos */
+.official-book-photo {
+  margin: 1rem 0 0;
+  border: 1px solid rgba(7, 20, 38, 0.12);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.official-book-photo > summary {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.official-book-photo > summary::-webkit-details-marker {
+  display: none;
+}
+
+.official-book-photo > summary span {
+  color: #9e1b32;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.official-book-photo > summary strong {
+  color: #071426;
+  font-size: 0.84rem;
+}
+
+.official-book-photo > summary i {
+  display: grid;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #d6a629;
+  color: #071426;
+  font-style: normal;
+  font-weight: 900;
+  transition: transform 180ms ease;
+}
+
+.official-book-photo[open] > summary i {
+  transform: rotate(45deg);
+}
+
+.official-book-photo figure {
+  margin: 0;
+  padding: 0 1rem 1rem;
+}
+
+.official-book-photo a {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f3eee4;
+}
+
+.official-book-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: brightness(1.06) contrast(1.12) saturate(0.82);
+}
+
+.official-book-photo figcaption {
+  margin-top: 0.55rem;
+  color: #697382;
+  font-size: 0.74rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .official-book-photo > summary {
+    grid-template-columns: 1fr auto;
+  }
+
+  .official-book-photo > summary span {
+    grid-column: 1 / -1;
+  }
+}
+
