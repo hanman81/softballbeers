@@ -1975,3 +1975,202 @@ button {
   }
 }
 
+/* Expandable digital scorebooks */
+.game-scorebook {
+  margin-top: 1.35rem;
+  border: 1px solid rgba(7, 20, 38, 0.14);
+  border-radius: 15px;
+  background: #f8f5ee;
+}
+
+.game-scorebook summary {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.1rem;
+  color: #071426;
+  cursor: pointer;
+  list-style: none;
+}
+
+.game-scorebook summary::-webkit-details-marker {
+  display: none;
+}
+
+.game-scorebook summary span {
+  color: #697382;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.game-scorebook summary strong {
+  font-size: 0.9rem;
+}
+
+.game-scorebook summary i {
+  display: grid;
+  width: 1.65rem;
+  height: 1.65rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #071426;
+  color: #fff;
+  font-style: normal;
+  transition: transform 180ms ease;
+}
+
+.game-scorebook[open] summary i {
+  transform: rotate(45deg);
+}
+
+.scorebook-panel {
+  padding: 0 1.1rem 1.2rem;
+  border-top: 1px solid rgba(7, 20, 38, 0.1);
+}
+
+.scorebook-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 0 0.3rem;
+}
+
+.scorebook-title small {
+  color: #697382;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.scorebook-title h4,
+.game-stats-title {
+  margin: 0.2rem 0 0;
+  color: #071426;
+  font-size: 1.05rem;
+}
+
+.scorebook-title > strong {
+  color: #9e1b32;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
+.scorebook-note {
+  margin: 0.5rem 0 0.9rem !important;
+  color: #697382 !important;
+  font-size: 0.78rem;
+  line-height: 1.45 !important;
+}
+
+.scorebook-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(7, 20, 38, 0.12);
+  border-radius: 12px;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scorebook-table {
+  width: 100%;
+  min-width: 590px;
+  border-collapse: collapse;
+  color: #253144;
+  font-size: 0.78rem;
+}
+
+.scorebook-table caption {
+  padding: 0.75rem 0.8rem;
+  color: #071426;
+  font-weight: 900;
+  text-align: left;
+}
+
+.scorebook-table th,
+.scorebook-table td {
+  padding: 0.55rem 0.65rem;
+  border-top: 1px solid rgba(7, 20, 38, 0.08);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.scorebook-table thead th {
+  border-top: 0;
+  background: #071426;
+  color: #fff;
+  font-size: 0.69rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.scorebook-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 132px;
+  background: #fff;
+  color: #071426;
+  text-align: left;
+}
+
+.pa-result {
+  display: inline-grid;
+  min-width: 2.15rem;
+  min-height: 2.15rem;
+  padding: 0.2rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #dce9df;
+  color: #0c5a2a;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.pa-result.out {
+  background: #eceef1;
+  color: #596272;
+}
+
+.pa-result.walk {
+  background: #dbe9f6;
+  color: #174f7e;
+}
+
+.pa-result.strikeout {
+  background: #f5dce1;
+  color: #9e1b32;
+}
+
+.pa-empty {
+  color: #b0b6bf;
+}
+
+.game-stats-title {
+  margin: 1.25rem 0 0.7rem;
+}
+
+.game-stats-table {
+  min-width: 720px;
+}
+
+@media (max-width: 760px) {
+  .game-scorebook summary {
+    grid-template-columns: 1fr auto;
+  }
+
+  .game-scorebook summary span {
+    grid-column: 1 / -1;
+  }
+
+  .scorebook-title {
+    align-items: flex-start;
+  }
+
+  .scorebook-table {
+    font-size: 0.74rem;
+  }
+}
+
