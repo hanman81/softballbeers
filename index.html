@@ -52,6 +52,7 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#fall-recaps">Game recaps</a>
         <a href="#schedule">Schedule</a>
         <a href="#stats">Stats</a>
         <a href="#season">Spring recap</a>
@@ -80,7 +81,7 @@
             <a class="button button-ghost" href="#roster">Meet the team</a>
           </div>
         </div>
-        <a class="scroll-cue" href="#championship" aria-label="Scroll to championship recap">
+        <a class="scroll-cue" href="#fall-recaps" aria-label="Scroll to Fall 2026 game recaps">
           <span>Scroll</span>
           <span aria-hidden="true">↓</span>
         </a>
@@ -93,41 +94,77 @@
         <div style="flex-wrap:wrap;"><strong>1</strong><span>Landed can flip</span><small style="flex-basis:100%;text-align:center;font-size:.68rem;font-weight:700;letter-spacing:.04em;">Sean Hanley · 1</small></div>
       </section>
 
-      <section id="championship" class="section championship-section">
+      <section id="fall-recaps" class="section fall-recaps-section" aria-labelledby="fall-recaps-title">
         <div class="section-heading split-heading">
           <div>
             <span class="section-number">01</span>
-            <p class="eyebrow dark">Championship recap</p>
-            <h2>The Beers win it all.</h2>
+            <p class="eyebrow dark">Fall 2026 · Game stories</p>
+            <h2 id="fall-recaps-title">Four games in.</h2>
           </div>
           <p class="lead">
-            After falling behind early in the semifinal, the bats came alive and
-            the Beers carried that momentum into the title game.
+            A 2–2 start, three home runs and plenty of late-inning noise. Recaps are
+            drawn from Shania’s official scorebook.
           </p>
         </div>
 
-        <div class="recap-grid">
-          <article class="recap-card feature-card">
-            <span class="game-label">Playoff · Semifinal</span>
-            <h3>Boathouse Beers (2) vs. Old Sparts (3)</h3>
+        <div class="game-recap-grid">
+          <article class="game-recap-card loss">
+            <div class="game-recap-meta">
+              <span>Week 2 · August 25</span>
+              <strong>L 11–14</strong>
+            </div>
+            <h3>Late rally makes the Misfits sweat</h3>
             <p>
-              The Old Sparts held the Beers scoreless through the first three
-              innings and built a 6–0 lead. The Beers scored five in the fourth,
-              then added eleven more to win by mercy rule after six innings.
+              Boathouse opened with one run, then went quiet for three innings before
+              the bats woke up. The Beers hit the five-run limit in both the fifth and
+              sixth, turning a lopsided game into a late threat, but the Misfits held on.
             </p>
-            <div class="result">16-run rally</div>
+            <p class="game-recap-highlight">Ryan Mendoza hit the season’s first home run.</p>
           </article>
 
-          <article class="recap-card">
-            <span class="game-label">Championship</span>
-            <h3>Lum Bums (1) vs. Boathouse Beers (2)</h3>
+          <article class="game-recap-card win">
+            <div class="game-recap-meta">
+              <span>Week 3 · September 1</span>
+              <strong>W 16–15</strong>
+            </div>
+            <h3>Beers edge Swell Bar in a shootout</h3>
             <p>
-              Boathouse went three-up, three-down in the top of the first, then
-              found a way to finish the season on top.
+              In a one-run thriller, the Beers traded big innings with Swell Bar and
+              finished on the right side of a 16–15 final. With no home runs to lean on,
+              the win came from steady contact up and down the order.
             </p>
-            <div class="result gold">Champions</div>
+            <p class="game-recap-highlight">First win of the fall season.</p>
+          </article>
+
+          <article class="game-recap-card win">
+            <div class="game-recap-meta">
+              <span>Week 4 · September 8</span>
+              <strong>W 18–12</strong>
+            </div>
+            <h3>Seven-run sixth seals back-to-back wins</h3>
+            <p>
+              The Beers scored six across the first two innings, then broke it open
+              with three in the fifth and seven in the sixth to beat Inglorious
+              Batters, 18–12.
+            </p>
+            <p class="game-recap-highlight">Shane McDermott homered; Dan Grossman recorded the team’s first strikeout.</p>
+          </article>
+
+          <article class="game-recap-card loss">
+            <div class="game-recap-meta">
+              <span>Week 5 · September 15</span>
+              <strong>L 12–16</strong>
+            </div>
+            <h3>Dusty Ol’ Mitts pull away late</h3>
+            <p>
+              Boathouse scored six across the first two innings and stayed within
+              reach, but Dusty Ol’ Mitts pulled away for a 16–12 win.
+            </p>
+            <p class="game-recap-highlight">Sean Hanley homered and landed the season’s first can flip.</p>
           </article>
         </div>
+
+        <p class="scorebook-credit">Scorebook and game record: Shania, official scorekeeper.</p>
       </section>
 
       <section id="schedule" class="section schedule-section">
@@ -545,6 +582,43 @@
               home runs.
             </p>
           </details>
+        </div>
+      </section>
+
+      <section id="championship" class="section championship-section">
+        <div class="section-heading split-heading">
+          <div>
+            <span class="section-number">Spring 2026</span>
+            <p class="eyebrow dark">Championship recap</p>
+            <h2>The Beers win it all.</h2>
+          </div>
+          <p class="lead">
+            After falling behind early in the semifinal, the bats came alive and
+            the Beers carried that momentum into the title game.
+          </p>
+        </div>
+
+        <div class="recap-grid">
+          <article class="recap-card feature-card">
+            <span class="game-label">Playoff · Semifinal</span>
+            <h3>Boathouse Beers (2) vs. Old Sparts (3)</h3>
+            <p>
+              The Old Sparts held the Beers scoreless through the first three
+              innings and built a 6–0 lead. The Beers scored five in the fourth,
+              then added eleven more to win by mercy rule after six innings.
+            </p>
+            <div class="result">16-run rally</div>
+          </article>
+
+          <article class="recap-card">
+            <span class="game-label">Championship</span>
+            <h3>Lum Bums (1) vs. Boathouse Beers (2)</h3>
+            <p>
+              Boathouse went three-up, three-down in the top of the first, then
+              found a way to finish the season on top.
+            </p>
+            <div class="result gold">Champions</div>
+          </article>
         </div>
       </section>
 
