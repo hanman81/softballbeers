@@ -25,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260920-3" />
+    <link rel="stylesheet" href="styles.css?v=20260920-4" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -1024,39 +1024,87 @@
         </details>
       </section>
 
-      <section class="section banquet-section">
-        <div class="section-heading">
-          <span class="section-number">08</span>
-          <p class="eyebrow dark">Off the field</p>
-          <h2>Beers banquets</h2>
+      <section class="section banquet-section" aria-labelledby="banquet-title">
+        <div class="section-heading split-heading">
+          <div>
+            <span class="section-number">08</span>
+            <p class="eyebrow dark">Off the field</p>
+            <h2 id="banquet-title">Beers banquets</h2>
+          </div>
+          <p class="lead">
+            Swipe, tap the arrows or use the dots to look back at the Beers banquet tradition.
+          </p>
         </div>
 
-        <div class="banquet-grid">
-          <article class="banquet-card banquet-latest">
-            <div>
-              <span class="game-label">Third annual</span>
-              <h3>The Cavalier · San Francisco</h3>
-              <p>
-                The newest chapter in a tradition that started at the Boathouse
-                Tavern in 2023.
-              </p>
+        <div class="banquet-slideshow" aria-roledescription="carousel" aria-label="Boathouse Beers banquet photos" tabindex="0">
+          <div class="banquet-stage" aria-live="polite">
+            <figure class="banquet-slide is-active" data-banquet-slide aria-hidden="false">
+              <img
+                src="assets/gallery/2025-season-banquet-cavalier.jpg?v=20260920"
+                alt="Boathouse Beers teammates together after dinner at The Cavalier in San Francisco for the 2025 banquet"
+              />
+              <figcaption>
+                <span class="game-label">Third annual · 2025</span>
+                <h3>The Cavalier · San Francisco</h3>
+                <p>The newest chapter in a tradition that started at the Boathouse Tavern in 2023.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="banquet-slide" data-banquet-slide aria-hidden="true">
+              <img
+                src="assets/gallery/2025-summer-banquet.svg?v=20260920"
+                alt="Boathouse Beers teammates and friends at the Spring Season 2025 Mid Summer Classic banquet"
+                loading="lazy"
+              />
+              <figcaption>
+                <span class="game-label">Spring season 2025</span>
+                <h3>Mid Summer Classic · Coach’s backyard</h3>
+                <p>Held on the coach’s birthday, July 26, 2025.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="banquet-slide" data-banquet-slide aria-hidden="true">
+              <img
+                src="assets/gallery/2024-banquet-topgolf.jpg?v=20260920"
+                alt="Boathouse Beers teammates and friends together at Topgolf for the 2024 team banquet"
+                loading="lazy"
+              />
+              <figcaption>
+                <span class="game-label">Second annual · 2024</span>
+                <h3>Topgolf · San Jose</h3>
+                <p>The second annual team banquet, held December 10, 2024.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="banquet-slide" data-banquet-slide aria-hidden="true">
+              <img
+                src="assets/gallery/2023-first-annual-beers-banquet.jpg?v=20260920"
+                alt="Boathouse Beers teammates together at the first annual Beers banquet in 2023"
+                loading="lazy"
+              />
+              <figcaption>
+                <span class="game-label">First annual · 2023</span>
+                <h3>Boathouse Tavern</h3>
+                <p>The first annual Beers banquet, held December 5, 2023.</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="banquet-controls">
+            <button class="banquet-arrow" type="button" data-banquet-prev aria-label="Previous banquet photo">
+              <span aria-hidden="true">&#8592;</span>
+            </button>
+            <div class="banquet-dots" aria-label="Choose a banquet photo">
+              <button class="is-active" type="button" data-banquet-dot="0" aria-label="Show 2025 Cavalier banquet" aria-current="true"></button>
+              <button type="button" data-banquet-dot="1" aria-label="Show Spring 2025 Mid Summer Classic banquet"></button>
+              <button type="button" data-banquet-dot="2" aria-label="Show 2024 Topgolf banquet"></button>
+              <button type="button" data-banquet-dot="3" aria-label="Show 2023 first annual banquet"></button>
             </div>
-          </article>
-          <article class="banquet-card">
-            <span class="game-label">Summer 2025</span>
-            <h3>Coach’s backyard</h3>
-            <p>Held on the coach’s birthday, July 26, 2025.</p>
-          </article>
-          <article class="banquet-card">
-            <span class="game-label">2024</span>
-            <h3>Topgolf · San Jose</h3>
-            <p>The second annual team banquet, held December 10, 2024.</p>
-          </article>
-          <article class="banquet-card">
-            <span class="game-label">2023</span>
-            <h3>Boathouse Tavern</h3>
-            <p>The first annual Beers banquet, held December 5, 2023.</p>
-          </article>
+            <p class="banquet-count" aria-hidden="true"><span data-banquet-current>1</span> / 4</p>
+            <button class="banquet-arrow" type="button" data-banquet-next aria-label="Next banquet photo">
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -1176,6 +1224,6 @@
       <p>These terms and this privacy notice may be updated by posting changes here.</p>
     </dialog>
 
-    <script src="script.js?v=20260919-2"></script>
+    <script src="script.js?v=20260920-3"></script>
   </body>
 </html>
