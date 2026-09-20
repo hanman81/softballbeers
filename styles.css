@@ -2406,3 +2406,162 @@ button {
   font-style: italic;
   line-height: 1.45;
 }
+
+
+/* Banquet slideshow */
+.banquet-section {
+  background: var(--cream);
+}
+
+.banquet-slideshow {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.banquet-stage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  background: #050b14;
+  box-shadow: 0 24px 70px rgba(7, 20, 38, 0.18);
+}
+
+.banquet-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: #050b14;
+  transition: opacity 450ms ease;
+}
+
+.banquet-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.banquet-slide img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  background: #050b14;
+}
+
+.banquet-slide figcaption {
+  padding: 1.15rem 1.3rem 1.3rem;
+  color: white;
+  background: var(--navy-900);
+}
+
+.banquet-slide .game-label {
+  color: var(--gold);
+}
+
+.banquet-slide h3 {
+  margin: .5rem 0 .4rem;
+  font: 800 clamp(1.45rem, 3vw, 2.25rem) / .98 var(--display);
+  text-transform: uppercase;
+}
+
+.banquet-slide p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255, 255, 255, .7);
+  font-size: .9rem;
+}
+
+.banquet-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.banquet-arrow {
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(7, 20, 38, .3);
+  color: var(--navy-900);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.35rem;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.banquet-arrow:hover,
+.banquet-arrow:focus-visible {
+  border-color: var(--red);
+  color: white;
+  background: var(--red);
+}
+
+.banquet-dots {
+  display: flex;
+  gap: .65rem;
+}
+
+.banquet-dots button {
+  width: 38px;
+  height: 5px;
+  padding: 0;
+  border: 0;
+  background: rgba(7, 20, 38, .24);
+  cursor: pointer;
+}
+
+.banquet-dots button.is-active {
+  background: var(--red);
+}
+
+.banquet-count {
+  margin: 0;
+  color: var(--muted);
+  font: 800 .72rem/1 var(--body);
+  letter-spacing: .1em;
+}
+
+@media (max-width: 700px) {
+  .banquet-stage {
+    aspect-ratio: 4 / 5;
+  }
+
+  .banquet-slide figcaption {
+    padding: .9rem 1rem 1rem;
+  }
+
+  .banquet-slide h3 {
+    font-size: 1.45rem;
+  }
+
+  .banquet-slide p {
+    font-size: .82rem;
+  }
+
+  .banquet-controls {
+    grid-template-columns: auto 1fr auto;
+    gap: .75rem;
+  }
+
+  .banquet-count {
+    display: none;
+  }
+
+  .banquet-arrow {
+    width: 46px;
+    height: 46px;
+  }
+
+  .banquet-dots {
+    justify-content: center;
+  }
+
+  .banquet-dots button {
+    width: 28px;
+  }
+}
