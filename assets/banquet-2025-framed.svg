@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1448" height="1086" viewBox="0 0 1448 1086">
+<defs>
+  <linearGradient id="gold" x1="0" x2="1"><stop stop-color="#d49a31"/><stop offset=".5" stop-color="#ffe1a0"/><stop offset="1" stop-color="#b8751d"/></linearGradient>
+  <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#000" stop-opacity=".05"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient>
+  <clipPath id="photoClip"><rect x="118" y="214" width="1212" height="704" rx="18"/></clipPath>
+</defs>
+<rect width="1448" height="1086" fill="#090909"/>
+<rect x="14" y="14" width="1420" height="1058" rx="8" fill="none" stroke="url(#gold)" stroke-width="6"/>
+<rect x="26" y="26" width="1396" height="1034" rx="5" fill="none" stroke="#6d451c" stroke-width="2"/>
+<path d="M32 155 C68 120,82 78,98 34 L150 34 C130 80,112 124,72 174Z" fill="#691018"/>
+<path d="M1416 155 C1380 120,1366 78,1350 34 L1298 34 C1318 80,1336 124,1376 174Z" fill="#691018"/>
+<text x="724" y="70" text-anchor="middle" fill="#f5d287" font-family="Georgia,serif" font-size="44" font-style="italic">3rd Annual</text>
+<text x="724" y="145" text-anchor="middle" fill="url(#gold)" font-family="Georgia,serif" font-size="86" font-weight="700">Beers Banquet</text>
+<text x="724" y="195" text-anchor="middle" fill="#f5d287" font-family="Georgia,serif" font-size="44" font-weight="700" letter-spacing="8">2025</text>
+<circle cx="250" cy="107" r="56" fill="#eee0bd" stroke="#c28831" stroke-width="5"/>
+<path d="M213 75 C245 92,260 121,280 146 M220 62 C250 80,277 105,294 135" fill="none" stroke="#a03a24" stroke-width="5" stroke-dasharray="8 7"/>
+<g transform="translate(1126 73) rotate(-38)">
+  <rect x="0" y="0" width="18" height="116" rx="9" fill="#b97827" stroke="#f0c66c" stroke-width="3"/>
+  <rect x="58" y="0" width="18" height="116" rx="9" fill="#b97827" stroke="#f0c66c" stroke-width="3" transform="rotate(76 67 58)"/>
+</g>
+<rect x="102" y="202" width="1244" height="728" rx="24" fill="#090909" stroke="url(#gold)" stroke-width="5"/>
+<image href="https://lh3.googleusercontent.com/sitesv/AG8ngQWXtDgqNWHBuEv_Nkjw50ZPMkyu7MOdmtlR4rQOTQfeWlH5Xbagj5RYWQwXA-UHmMeghLn0BV5AfwwKtag3nEnQWjPfI67dwkfD7YZx9jFyIhLiX6Zdn7YFNL8G_sH5T_LSFC8so7dnGEDG2BrRF85fUqnF2oUxClfH2H6ciw_NvxqoV4f9APb8Xv-1PTgE2io_O1yjSJXOffi11SZhEiwjLouaFriRAFdmc7Et=w1280" x="118" y="214" width="1212" height="704" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)"/>
+<rect x="118" y="214" width="1212" height="704" rx="18" fill="url(#shade)"/>
+<g fill="#e7bd67" font-family="Georgia,serif" text-anchor="middle">
+  <text x="72" y="390" font-size="24">STEAK</text>
+  <text x="72" y="425" font-size="24">DINNERS</text>
+  <text x="72" y="460" font-size="20">&amp;</text>
+  <text x="72" y="495" font-size="24">COCKTAILS</text>
+</g>
+<g transform="translate(57 582)">
+  <path d="M0 0 h28 l-5 61 h-18z" fill="none" stroke="#d99f3e" stroke-width="3"/>
+  <path d="M6 20 h16 M5 34 h18" stroke="#d99f3e" stroke-width="3"/>
+  <path d="M12 -20 c14 2 18 10 14 18" fill="none" stroke="#d99f3e" stroke-width="4"/>
+</g>
+<g fill="#d99f3e" stroke="#8b4d16" stroke-width="2">
+  <path d="M34 902 L88 742 L112 902Z"/>
+  <path d="M26 902 L76 822 L128 902Z" opacity=".7"/>
+</g>
+<g transform="translate(1324 575)">
+  <path d="M0 0 h52 l-10 74 h-32z" fill="none" stroke="#d99f3e" stroke-width="4"/>
+  <path d="M9 24 h34 M7 43 h38" stroke="#d99f3e" stroke-width="3"/>
+  <path d="M15 -18 c32 5 39 18 31 26" fill="none" stroke="#d99f3e" stroke-width="5"/>
+</g>
+<rect x="382" y="956" width="684" height="76" rx="18" fill="#0f0f0f" stroke="url(#gold)" stroke-width="4"/>
+<text x="724" y="1006" text-anchor="middle" fill="#f3cf82" font-family="Georgia,serif" font-size="34" letter-spacing="5">THE CAVALIER • SAN FRANCISCO</text>
+</svg>
