@@ -30,3 +30,23 @@ addBanquetPhoto(c=>c.querySelector('h3')?.textContent.includes('Boathouse Tavern
 const sponsorSection=document.querySelector('#sponsor');if(sponsorSection){const sponsorCopy=sponsorSection.querySelector('.sponsor-copy'),sponsorBadge=sponsorSection.querySelector('.sponsor-badge');if(sponsorCopy&&!sponsorCopy.querySelector('.sponsor-location')){const b=document.createElement('div');b.className='sponsor-location';b.innerHTML='<p style="margin:1.5rem 0 .35rem;font-weight:800;color:#fff;">2030 Clement Avenue</p><p style="margin:0 0 .75rem;">Alameda, CA 94501</p><a href="https://www.google.com/maps/search/?api=1&query=2030+Clement+Avenue+Alameda+CA+94501" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:1.25rem;color:#f7b928;font-weight:800;text-decoration:none;">Open in Google Maps ↗</a><div style="overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,.18);width:100%;max-width:620px;box-shadow:0 18px 45px rgba(0,0,0,.22);"><iframe title="Boathouse Tavern map" src="https://www.google.com/maps?q=2030+Clement+Avenue,+Alameda,+CA+94501&output=embed" width="100%" height="280" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>';const v=sponsorCopy.querySelector('.button');v?sponsorCopy.insertBefore(b,v):sponsorCopy.appendChild(b)}if(sponsorBadge)sponsorBadge.innerHTML='<a href="https://www.boathousealameda.net/" target="_blank" rel="noopener" style="display:flex;width:100%;height:100%;min-height:360px;align-items:center;justify-content:center;padding:2rem;text-decoration:none;background:#fff;"><img src="https://images.squarespace-cdn.com/content/v1/61c2640cf8c3e52283ca6e7a/1641356661785-5VEK3UL667TF28IYMHSL/IMG_3288.jpg" alt="Boathouse Alameda logo" style="display:block;max-width:100%;max-height:330px;width:auto;height:auto;margin:0 auto;object-fit:contain;" loading="lazy" /></a>'}
 
 document.querySelector('#year').textContent=new Date().getFullYear();
+
+
+const banquetGallery=document.querySelector('.banquet-slideshow');
+if(banquetGallery){
+ const slides=[...banquetGallery.querySelectorAll('[data-banquet-slide]')],dots=[...banquetGallery.querySelectorAll('[data-banquet-dot]')],prev=banquetGallery.querySelector('[data-banquet-prev]'),next=banquetGallery.querySelector('[data-banquet-next]'),current=banquetGallery.querySelector('[data-banquet-current]'),reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let active=0,timer,touchX=0;
+ const show=i=>{active=(i+slides.length)%slides.length;slides.forEach((s,n)=>{const on=n===active;s.classList.toggle('is-active',on);s.setAttribute('aria-hidden',String(!on))});dots.forEach((d,n)=>{const on=n===active;d.classList.toggle('is-active',on);on?d.setAttribute('aria-current','true'):d.removeAttribute('aria-current')});if(current)current.textContent=String(active+1)};
+ const stop=()=>clearInterval(timer),start=()=>{if(!reduced){stop();timer=setInterval(()=>show(active+1),6500)}};
+ prev?.addEventListener('click',()=>{show(active-1);start()});
+ next?.addEventListener('click',()=>{show(active+1);start()});
+ dots.forEach(d=>d.addEventListener('click',()=>{show(Number(d.dataset.banquetDot));start()}));
+ banquetGallery.addEventListener('mouseenter',stop);
+ banquetGallery.addEventListener('mouseleave',start);
+ banquetGallery.addEventListener('focusin',stop);
+ banquetGallery.addEventListener('focusout',start);
+ banquetGallery.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){show(active-1);start()}if(e.key==='ArrowRight'){show(active+1);start()}});
+ banquetGallery.addEventListener('touchstart',e=>touchX=e.changedTouches[0].clientX,{passive:true});
+ banquetGallery.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-touchX;if(Math.abs(d)>45){show(active+(d<0?1:-1));start()}},{passive:true});
+ start();
+}
