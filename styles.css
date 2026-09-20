@@ -1067,15 +1067,47 @@ button {
 .banquet-card:first-child {
   grid-row: span 2;
   min-height: 580px;
+  position: relative;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
+  padding: 0;
   color: white;
-  border: 0;
-  background-color: #090909;
-  background-image: url("assets/banquet-2025-framed.svg?v=20260920-1");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  border: 4px solid #d7a84a;
+  outline: 10px solid #090909;
+  outline-offset: -14px;
+  background:
+    linear-gradient(0deg, rgba(4, 11, 20, 0.18), rgba(4, 11, 20, 0.04)),
+    url("https://lh3.googleusercontent.com/sitesv/AG8ngQWXtDgqNWHBuEv_Nkjw50ZPMkyu7MOdmtlR4rQOTQfeWlH5Xbagj5RYWQwXA-UHmMeghLn0BV5AfwwKtag3nEnQWjPfI67dwkfD7YZx9jFyIhLiX6Zdn7YFNL8G_sH5T_LSFC8so7dnGEDG2BrRF85fUqnF2oUxClfH2H6ciw_NvxqoV4f9APb8Xv-1PTgE2io_O1yjSJXOffi11SZhEiwjLouaFriRAFdmc7Et=w1280")
+      center / cover no-repeat;
+  box-shadow:
+    inset 0 0 0 2px #f1cf84,
+    inset 0 0 0 14px #090909,
+    inset 0 0 0 16px #b77c26;
+}
+
+.banquet-card:first-child > div {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 18px;
+  padding: 1.15rem 1.25rem 1.3rem;
+  border: 1px solid rgba(241, 207, 132, 0.65);
+  background: rgba(4, 11, 20, 0.86);
+  backdrop-filter: blur(5px);
+}
+
+.banquet-card:first-child .game-label {
+  color: #f2c65f;
+}
+
+.banquet-card:first-child h3 {
+  margin-top: .55rem;
+}
+
+.banquet-card:first-child p {
+  margin-bottom: 0;
+  color: rgba(255,255,255,.78);
 }
 
 .banquet-card h3 {
@@ -1654,6 +1686,22 @@ button {
   .banquet-card:first-child {
     grid-column: auto;
     min-height: 420px;
+    background-position: center;
+  }
+
+  .banquet-card:first-child > div {
+    margin: 14px;
+    padding: 1rem;
+  }
+
+  .banquet-card:first-child h3 {
+    font-size: 1.7rem;
+    line-height: .98;
+  }
+
+  .banquet-card:first-child p {
+    font-size: .9rem;
+    line-height: 1.45;
   }
 
   .sponsor-copy,
