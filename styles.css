@@ -900,6 +900,32 @@ button {
   background: white;
 }
 
+.rules-feature {
+  width: min(100%, 860px);
+  margin: 0 auto clamp(2rem, 5vw, 4rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 22px 55px rgba(7, 20, 38, 0.14);
+}
+
+.rules-feature a,
+.rules-feature img {
+  display: block;
+  width: 100%;
+}
+
+.rules-feature img {
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.rules-feature a:focus-visible {
+  outline: 4px solid var(--blue-bright);
+  outline-offset: -4px;
+}
+
 .rule-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
