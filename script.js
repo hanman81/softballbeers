@@ -21,6 +21,25 @@ if(gallery){
  const stop=()=>clearInterval(timer),start=()=>{if(!reduced){stop();timer=setInterval(()=>show(active+1),6000)}};prev.addEventListener('click',()=>{show(active-1);start()});next.addEventListener('click',()=>{show(active+1);start()});dots.forEach(d=>d.addEventListener('click',()=>{show(Number(d.dataset.galleryDot));start()}));gallery.addEventListener('mouseenter',stop);gallery.addEventListener('mouseleave',start);gallery.addEventListener('focusin',stop);gallery.addEventListener('focusout',start);gallery.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(active-1);if(e.key==='ArrowRight')show(active+1)});gallery.addEventListener('touchstart',e=>touchX=e.changedTouches[0].clientX,{passive:true});gallery.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-touchX;if(Math.abs(d)>45)show(active+(d<0?1:-1))},{passive:true});start();
 }
 
+const championshipGallery=document.querySelector('.championship-gallery');
+if(championshipGallery){
+ const slides=[...championshipGallery.querySelectorAll('[data-championship-slide]')],dots=[...championshipGallery.querySelectorAll('[data-championship-dot]')],prev=championshipGallery.querySelector('[data-championship-prev]'),next=championshipGallery.querySelector('[data-championship-next]'),current=championshipGallery.querySelector('[data-championship-current]'),reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let active=0,timer,touchX=0;
+ const show=i=>{active=(i+slides.length)%slides.length;slides.forEach((s,n)=>{const on=n===active;s.classList.toggle('is-active',on);s.setAttribute('aria-hidden',String(!on))});dots.forEach((d,n)=>{const on=n===active;d.classList.toggle('is-active',on);on?d.setAttribute('aria-current','true'):d.removeAttribute('aria-current')});if(current)current.textContent=String(active+1)};
+ const stop=()=>clearInterval(timer),start=()=>{if(!reduced){stop();timer=setInterval(()=>show(active+1),6500)}};
+ prev?.addEventListener('click',()=>{show(active-1);start()});
+ next?.addEventListener('click',()=>{show(active+1);start()});
+ dots.forEach(d=>d.addEventListener('click',()=>{show(Number(d.dataset.championshipDot));start()}));
+ championshipGallery.addEventListener('mouseenter',stop);
+ championshipGallery.addEventListener('mouseleave',start);
+ championshipGallery.addEventListener('focusin',stop);
+ championshipGallery.addEventListener('focusout',start);
+ championshipGallery.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){show(active-1);start()}if(e.key==='ArrowRight'){show(active+1);start()}});
+ championshipGallery.addEventListener('touchstart',e=>touchX=e.changedTouches[0].clientX,{passive:true});
+ championshipGallery.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-touchX;if(Math.abs(d)>45){show(active+(d<0?1:-1));start()}},{passive:true});
+ start();
+}
+
 const addBanquetPhoto=(matcher,src,alt)=>{const card=[...document.querySelectorAll('.banquet-card')].find(matcher);if(card&&!card.querySelector('img')){const p=document.createElement('img');p.src=src;p.alt=alt;p.loading='lazy';Object.assign(p.style,{width:'100%',aspectRatio:'4 / 3',objectFit:'cover',borderRadius:'14px',marginBottom:'1rem'});card.prepend(p)}};
 addBanquetPhoto(c=>c.classList.contains('banquet-latest'),'assets/gallery/2025-season-banquet-cavalier.jpg','Boathouse Beers teammates together after dinner at The Cavalier in San Francisco for the 2025 season banquet');
 addBanquetPhoto(c=>c.querySelector('h3')?.textContent.includes('Coach’s backyard'),'assets/gallery/2025-summer-banquet.png?v=20260922','Boathouse Beers teammates and friends gathered outdoors at night during the Summer 2025 banquet in the coach\'s backyard');
