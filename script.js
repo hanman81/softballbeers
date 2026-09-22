@@ -11,7 +11,7 @@ if(gallery){
  ['assets/gallery/2026-championship-celebration-bar.jpg','The Boathouse Beers team celebrating together at the bar after winning the 2026 championship','Championship celebration'],
  ['assets/gallery/fall-2025-team-photo.jpg','The Boathouse Beers Fall 2025 team posing together in matching jerseys','Fall 2025 team'],
  ['assets/gallery/2025-season-banquet-cavalier.jpg','Boathouse Beers teammates together after dinner at The Cavalier in San Francisco for the 2025 season banquet','2025 season banquet · The Cavalier, San Francisco'],
- ['assets/gallery/2025-summer-banquet.jpg?v=20260921-2','Boathouse Beers teammates and friends gathered outdoors at night during the 2025 summer banquet','Summer 2025 banquet'],
+ ['assets/gallery/2025-summer-banquet.png?v=20260922','Boathouse Beers teammates and friends gathered outdoors at night during the 2025 summer banquet','Summer 2025 banquet'],
  ['assets/gallery/2024-banquet-topgolf.jpg','Boathouse Beers teammates and friends together at Topgolf for the 2024 team banquet','2024 banquet · Topgolf'],
  ['assets/gallery/2023-first-annual-beers-banquet.jpg','Boathouse Beers teammates together at the 2023 banquet after the team\'s first season','2023 banquet · After our first season'],
  ['assets/gallery/first-win-team-fixed.jpg.b64','The Boathouse Beers team posing together on the softball field after their first win','After our first win']];
@@ -23,7 +23,7 @@ if(gallery){
 
 const addBanquetPhoto=(matcher,src,alt)=>{const card=[...document.querySelectorAll('.banquet-card')].find(matcher);if(card&&!card.querySelector('img')){const p=document.createElement('img');p.src=src;p.alt=alt;p.loading='lazy';Object.assign(p.style,{width:'100%',aspectRatio:'4 / 3',objectFit:'cover',borderRadius:'14px',marginBottom:'1rem'});card.prepend(p)}};
 addBanquetPhoto(c=>c.classList.contains('banquet-latest'),'assets/gallery/2025-season-banquet-cavalier.jpg','Boathouse Beers teammates together after dinner at The Cavalier in San Francisco for the 2025 season banquet');
-addBanquetPhoto(c=>c.querySelector('h3')?.textContent.includes('Coach’s backyard'),'assets/gallery/2025-summer-banquet.jpg?v=20260921-2','Boathouse Beers teammates and friends gathered outdoors at night during the Summer 2025 banquet in the coach\'s backyard');
+addBanquetPhoto(c=>c.querySelector('h3')?.textContent.includes('Coach’s backyard'),'assets/gallery/2025-summer-banquet.png?v=20260922','Boathouse Beers teammates and friends gathered outdoors at night during the Summer 2025 banquet in the coach\'s backyard');
 addBanquetPhoto(c=>c.querySelector('h3')?.textContent.includes('Topgolf'),'assets/gallery/2024-banquet-topgolf.jpg','Boathouse Beers teammates and friends together at Topgolf for the 2024 team banquet');
 addBanquetPhoto(c=>c.querySelector('h3')?.textContent.includes('Boathouse Tavern'),'assets/gallery/2023-first-annual-beers-banquet.jpg','Boathouse Beers teammates together at the 2023 banquet after the team\'s first season');
 
