@@ -484,6 +484,93 @@ button {
   color: var(--gold);
 }
 
+.spring-season-panel {
+  margin-top: 1.25rem;
+  color: white;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(48, 146, 255, 0.2), transparent 28%),
+    var(--navy-950);
+}
+
+.spring-season-panel > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 118px;
+  padding: 1.8rem clamp(1.5rem, 5vw, 4rem);
+  cursor: pointer;
+  list-style: none;
+}
+
+.spring-season-panel > summary::-webkit-details-marker {
+  display: none;
+}
+
+.spring-season-panel > summary small,
+.spring-season-panel > summary strong {
+  display: block;
+}
+
+.spring-season-panel > summary small {
+  margin-bottom: 0.45rem;
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.spring-season-panel > summary strong {
+  font: 800 clamp(1.8rem, 4vw, 3rem) / 0.95 var(--display);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.spring-season-action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.spring-season-action i {
+  color: var(--red);
+  font-size: 1.8rem;
+  font-style: normal;
+  transition: transform 160ms ease;
+}
+
+.spring-season-panel[open] .spring-season-action i {
+  transform: rotate(45deg);
+}
+
+.spring-season-panel[open] .spring-season-label {
+  font-size: 0;
+}
+
+.spring-season-panel[open] .spring-season-label::after {
+  content: "Close";
+  font-size: 0.75rem;
+}
+
+.spring-season-content {
+  padding: 1rem clamp(1.5rem, 5vw, 4rem) 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.spring-season-content .section-heading {
+  margin: 3rem 0;
+}
+
+.spring-season-content .section-heading h2 {
+  color: white;
+}
+
 .schedule-section {
   background: var(--cream);
 }
@@ -1630,6 +1717,27 @@ button {
   .recap-card {
     min-height: 350px;
     padding: 1.5rem;
+  }
+
+  .spring-season-panel > summary {
+    min-height: 104px;
+    padding: 1.4rem;
+  }
+
+  .spring-season-action {
+    gap: 0.6rem;
+  }
+
+  .spring-season-label {
+    display: none;
+  }
+
+  .spring-season-content {
+    padding: 0 1.4rem 2.5rem;
+  }
+
+  .spring-season-content .section-heading {
+    margin: 2.5rem 0;
   }
 
   .schedule-summary div {
