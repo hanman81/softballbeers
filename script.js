@@ -40,6 +40,26 @@ if(championshipGallery){
  start();
 }
 
+const rulesCarousel=document.querySelector('.rules-carousel');
+if(rulesCarousel){
+ const slides=[...rulesCarousel.querySelectorAll('[data-rules-slide]')],dots=[...rulesCarousel.querySelectorAll('[data-rules-dot]')],prev=rulesCarousel.querySelector('[data-rules-prev]'),next=rulesCarousel.querySelector('[data-rules-next]'),current=rulesCarousel.querySelector('[data-rules-current]'),reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let active=0,timer,touchX=0;
+ const show=i=>{active=(i+slides.length)%slides.length;slides.forEach((s,n)=>{const on=n===active;s.classList.toggle('is-active',on);s.setAttribute('aria-hidden',String(!on));const link=s.querySelector('a');if(link)link.tabIndex=on?0:-1});dots.forEach((d,n)=>{const on=n===active;d.classList.toggle('is-active',on);on?d.setAttribute('aria-current','true'):d.removeAttribute('aria-current')});if(current)current.textContent=String(active+1)};
+ const stop=()=>clearInterval(timer),start=()=>{if(!reduced){stop();timer=setInterval(()=>show(active+1),6500)}};
+ prev?.addEventListener('click',()=>{show(active-1);start()});
+ next?.addEventListener('click',()=>{show(active+1);start()});
+ dots.forEach(d=>d.addEventListener('click',()=>{show(Number(d.dataset.rulesDot));start()}));
+ rulesCarousel.addEventListener('mouseenter',stop);
+ rulesCarousel.addEventListener('mouseleave',start);
+ rulesCarousel.addEventListener('focusin',stop);
+ rulesCarousel.addEventListener('focusout',start);
+ rulesCarousel.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){show(active-1);start()}if(e.key==='ArrowRight'){show(active+1);start()}});
+ rulesCarousel.addEventListener('touchstart',e=>touchX=e.changedTouches[0].clientX,{passive:true});
+ rulesCarousel.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-touchX;if(Math.abs(d)>45){show(active+(d<0?1:-1));start()}},{passive:true});
+ show(0);
+ start();
+}
+
 const addBanquetPhoto=(matcher,src,alt)=>{const card=[...document.querySelectorAll('.banquet-card')].find(matcher);if(card&&!card.querySelector('img')){const p=document.createElement('img');p.src=src;p.alt=alt;p.loading='lazy';Object.assign(p.style,{width:'100%',aspectRatio:'4 / 3',objectFit:'cover',borderRadius:'14px',marginBottom:'1rem'});card.prepend(p)}};
 addBanquetPhoto(c=>c.classList.contains('banquet-latest'),'assets/gallery/2025-season-banquet-cavalier.jpg','Boathouse Beers teammates together after dinner at The Cavalier in San Francisco for the 2025 season banquet');
 addBanquetPhoto(c=>c.querySelector('h3')?.textContent.includes('Coach’s backyard'),'assets/gallery/2025-summer-banquet.png?v=20260922','Boathouse Beers teammates and friends gathered outdoors at night during the Summer 2025 banquet in the coach\'s backyard');

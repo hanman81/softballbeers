@@ -993,18 +993,56 @@
           <h2>Team &amp; league rules</h2>
         </div>
 
-        <figure class="rules-feature">
-          <a href="assets/boathouse-strikeout-rule.webp?v=20260920" target="_blank" rel="noopener" aria-label="Open the Boathouse Beers strikeout rule graphic full size">
-            <img
-              src="assets/boathouse-strikeout-rule.webp?v=20260920"
-              alt="Boathouse Beers team rule poster: Strike out? You owe 30 beers. K equals 30 beers."
-              width="1000"
-              height="1000"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-        </figure>
+        <div
+          class="rules-carousel"
+          aria-roledescription="carousel"
+          aria-label="Boathouse Beers team rule posters"
+          tabindex="0"
+        >
+          <div class="rules-carousel-stage" aria-live="polite">
+            <figure class="rules-carousel-slide is-active" data-rules-slide aria-hidden="false">
+              <a href="assets/rules/can-flip-rule.png" target="_blank" rel="noopener" aria-label="Open the Boathouse Beers can flip rule poster full size">
+                <img
+                  src="assets/rules/can-flip-rule.png"
+                  alt="Boathouse Beers can flip rule poster: flip the can, call a player's name before it lands, and if it lands upright that player shotguns a beer"
+                  width="1254"
+                  height="1254"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <figcaption>Can flip rule</figcaption>
+            </figure>
+
+            <figure class="rules-carousel-slide" data-rules-slide aria-hidden="true">
+              <a href="assets/rules/strikeout-30-beers.png" target="_blank" rel="noopener" aria-label="Open the Boathouse Beers strikeout rule poster full size" tabindex="-1">
+                <img
+                  src="assets/rules/strikeout-30-beers.png"
+                  alt="Boathouse Beers team rule poster: strike out and you owe the team 30 beers"
+                  width="1254"
+                  height="1254"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <figcaption>Strikeout rule · 30 beers</figcaption>
+            </figure>
+          </div>
+
+          <div class="rules-carousel-controls">
+            <button type="button" data-rules-prev aria-label="Previous rule poster">
+              <span aria-hidden="true">&#8592;</span>
+            </button>
+            <div class="rules-carousel-dots" aria-label="Choose a rule poster">
+              <button class="is-active" type="button" data-rules-dot="0" aria-label="Show can flip rule poster" aria-current="true"></button>
+              <button type="button" data-rules-dot="1" aria-label="Show strikeout rule poster"></button>
+            </div>
+            <p class="rules-carousel-count" aria-hidden="true"><span data-rules-current>1</span> / 2</p>
+            <button type="button" data-rules-next aria-label="Next rule poster">
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </div>
+        </div>
 
         <div class="rule-grid">
           <article class="rule-card accent-card">
