@@ -1207,7 +1207,7 @@ button {
 }
 
 .history-grid h3 {
-  margin: 5rem 0 0.8rem;
+  margin: 2.6rem 0 0.8rem;
   font: 800 2rem/0.94 var(--display);
   text-transform: uppercase;
 }
@@ -1215,6 +1215,38 @@ button {
 .history-grid p {
   color: rgba(255, 255, 255, 0.68);
   font-size: 0.88rem;
+}
+
+.history-grid .history-meta {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.history-awards {
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.history-awards strong {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--gold);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.history-awards ul {
+  margin: 0;
+  padding-left: 1.05rem;
+}
+
+.history-awards li {
+  margin: 0.35rem 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.8rem;
+  line-height: 1.35;
 }
 
 .archive-panel {
