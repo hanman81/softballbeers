@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1620" role="img" aria-labelledby="title desc">
+<title id="title">Boathouse Beers lineup vs Misfits, September 29, 2026</title>
+<desc id="desc">Away at Misfits, 8:10 PM. Batting order: Jeffrey Mena RC, Chris Pereira P, Sean Hanley LC, Justin Green 2B, Ryan Mendoza 1B, Eric Greene SS, Mike Ginsburg 3B, Shane McDermott 1B, Jeremy Wright C, Sub RF.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#020814"/></linearGradient>
+  <linearGradient id="red" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c82026"/><stop offset="1" stop-color="#8c1117"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".5"/></filter>
+</defs>
+<rect width="1080" height="1620" fill="url(#bg)"/>
+<g opacity=".18" fill="#fff">
+  <circle cx="90" cy="90" r="5"/><circle cx="155" cy="55" r="3"/><circle cx="920" cy="90" r="4"/><circle cx="965" cy="145" r="3"/>
+  <path d="M0 360h1080v5H0zM0 1450h1080v5H0z"/>
+</g>
+<g transform="translate(70 70)" filter="url(#shadow)">
+  <rect x="0" y="0" width="940" height="310" rx="24" fill="#091c34" stroke="#c82026" stroke-width="8"/>
+  <image href="favicon.png" x="34" y="35" width="210" height="210" preserveAspectRatio="xMidYMid meet"/>
+  <text x="520" y="105" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="900" letter-spacing="2">BOATHOUSE</text>
+  <text x="520" y="200" text-anchor="middle" fill="#f0efe9" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="900" letter-spacing="4">BEERS</text>
+  <text x="520" y="258" text-anchor="middle" fill="#c82026" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="6">TONIGHT'S LINEUP</text>
+</g>
+<g transform="translate(70 410)">
+  <rect width="940" height="190" rx="20" fill="#0b1c31" stroke="#d9dee7" stroke-width="3"/>
+  <rect x="0" y="0" width="430" height="190" rx="20" fill="url(#red)"/>
+  <text x="45" y="54" fill="#f7e6df" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">AWAY</text>
+  <text x="45" y="128" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="900" font-style="italic">MISFITS</text>
+  <text x="472" y="115" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900">VS</text>
+  <text x="590" y="64" fill="#c8d0da" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="3">GAME TIME</text>
+  <text x="590" y="132" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900">8:10 PM</text>
+</g>
+<g transform="translate(70 640)">
+  <rect width="940" height="800" rx="18" fill="#07182b" stroke="#d9dee7" stroke-width="3"/>
+  <rect width="940" height="82" rx="18" fill="url(#red)"/>
+  <text x="55" y="56" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="900">#</text>
+  <text x="245" y="56" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="900">PLAYER</text>
+  <text x="850" y="56" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="900" text-anchor="middle">POS</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800" fill="#fff">
+    <g transform="translate(0 82)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">1</text><text x="175" y="48">JEFFREY MENA</text><text x="850" y="48" text-anchor="middle">RC</text></g>
+    <g transform="translate(0 152)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">2</text><text x="175" y="48">CHRIS PEREIRA</text><text x="850" y="48" text-anchor="middle">P</text></g>
+    <g transform="translate(0 222)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">3</text><text x="175" y="48">SEAN HANLEY</text><text x="850" y="48" text-anchor="middle">LC</text></g>
+    <g transform="translate(0 292)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">4</text><text x="175" y="48">JUSTIN GREEN</text><text x="850" y="48" text-anchor="middle">2B</text></g>
+    <g transform="translate(0 362)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">5</text><text x="175" y="48">RYAN MENDOZA</text><text x="850" y="48" text-anchor="middle">1B</text></g>
+    <g transform="translate(0 432)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">6</text><text x="175" y="48">ERIC GREENE</text><text x="850" y="48" text-anchor="middle">SS</text></g>
+    <g transform="translate(0 502)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">7</text><text x="175" y="48">MIKE GINSBURG</text><text x="850" y="48" text-anchor="middle">3B</text></g>
+    <g transform="translate(0 572)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">8</text><text x="175" y="48">SHANE MCDERMOTT</text><text x="850" y="48" text-anchor="middle">1B</text></g>
+    <g transform="translate(0 642)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">9</text><text x="175" y="48">JEREMY WRIGHT</text><text x="850" y="48" text-anchor="middle">C</text></g>
+    <g transform="translate(0 712)"><rect width="940" height="88" fill="#07182b"/><text x="55" y="54">10</text><text x="175" y="54">SUB</text><text x="850" y="54" text-anchor="middle">RF</text></g>
+  </g>
+</g>
+<g transform="translate(70 1490)">
+  <text x="470" y="0" text-anchor="middle" fill="#c82026" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="900" letter-spacing="5">SEPTEMBER 29 · ALAMEDA, CA</text>
+</g>
+</svg>
