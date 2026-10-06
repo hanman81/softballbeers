@@ -26,6 +26,44 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=20260922-1" />
+    <style id="featured-carousel-styles">
+      .featured-carousel { padding-top:78px; color:white; background:#06101f; }
+      .featured-stage { position:relative; height:clamp(560px, calc(100svh - 146px), 840px); overflow:hidden; touch-action:pan-y; }
+      .featured-slide { position:absolute; inset:0; opacity:0; visibility:hidden; transition:opacity 450ms ease; }
+      .featured-slide.is-active { opacity:1; visibility:visible; }
+      .featured-lineup { display:grid; place-items:center; padding:16px; background:radial-gradient(ellipse at center,#122a46,#06101f 72%); }
+      .featured-lineup > a { display:block; height:100%; max-width:100%; aspect-ratio:2 / 3; min-height:0; }
+      .featured-lineup img { width:100%; height:100%; object-fit:contain; border-radius:12px; box-shadow:0 16px 44px rgba(0,0,0,.38); }
+      .featured-stage .hero { min-height:0; padding-top:0; display:grid; align-items:end; }
+      .featured-stage .hero-image { inset:0; height:100%; background-size:cover; background-position:center 72%; }
+      .featured-stage .hero-overlay { inset:0; height:100%; }
+      .featured-stage .hero-content { padding:3rem 0; }
+      .featured-champ-title { margin:0; font:900 clamp(5rem,12vw,10rem)/.76 var(--display); letter-spacing:-.045em; text-transform:uppercase; text-shadow:0 10px 32px rgba(0,0,0,.38); }
+      .featured-champ-title em { color:var(--red); font-style:italic; -webkit-text-stroke:2px white; paint-order:stroke fill; }
+      .featured-controls { display:flex; align-items:center; justify-content:center; gap:12px; min-height:68px; padding:10px 16px; border-top:1px solid rgba(255,255,255,.12); }
+      .featured-controls button { min-width:44px; min-height:44px; padding:8px; color:white; background:transparent; border:1px solid rgba(255,255,255,.3); border-radius:6px; cursor:pointer; }
+      .featured-controls button:hover { background:var(--red); }
+      .featured-carousel :focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+      .featured-dots { display:flex; gap:2px; }
+      .featured-dots button { border:0; display:grid; place-items:center; }
+      .featured-dots span { display:block; width:10px; height:10px; border-radius:50%; background:#667487; }
+      .featured-dots [aria-current="true"] span { background:var(--gold); }
+      .featured-label { min-width:210px; font-size:.76rem; font-weight:700; }
+      .featured-controls .featured-pause { font-size:.75rem; min-width:64px; }
+      @media (max-width:700px) {
+        .featured-stage { height:clamp(520px, calc(150vw - 16px), 820px); }
+        .featured-stage .hero { align-items:end; }
+        .featured-stage .hero-image { background-size:contain; background-position:center top; height:60%; }
+        .featured-stage .hero-overlay { background:linear-gradient(0deg,#040b14 0%,#040b14 30%,transparent 80%); }
+        .featured-stage .hero-content { padding:1.5rem 0 2rem; width:calc(100% - 32px); }
+        .featured-champ-title { font-size:clamp(4rem,18vw,6.2rem); }
+        .featured-stage .hero-content > p { margin:1.25rem 0; font-size:.94rem; }
+        .featured-stage .button { padding:.75rem 1rem; font-size:.68rem; }
+        .featured-controls { gap:6px; flex-wrap:wrap; }
+        .featured-label { order:5; flex-basis:100%; text-align:center; }
+      }
+      @media (prefers-reduced-motion:reduce) { .featured-slide { transition:none; } }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -65,37 +103,40 @@
     </header>
 
     <main id="main">
-      <section class="lineup-feature" aria-label="Tonight's lineup" style="background:#06101f;padding:28px 16px 34px;text-align:center;border-bottom:1px solid rgba(255,255,255,.08);">
-        <div style="max-width:760px;margin:0 auto;">
-          <img
-            src="assets/lineup-2026-10-06.svg?v=20261006-bosox"
-            alt="Boathouse Beers lineup for October 6, 2026: home vs. Pearl St Pirates by Swell, 8:10 PM."
-            width="1080"
-            height="1620"
-            style="display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 16px 44px rgba(0,0,0,.38);"
-          />
+      <!-- Homepage features: add a slide and its matching dot for future promotions. -->
+      <section class="featured-carousel" aria-roledescription="carousel" aria-label="Featured Beers updates" tabindex="0">
+        <div class="featured-stage">
+          <article class="featured-slide featured-lineup is-active" data-featured-slide aria-roledescription="slide" aria-label="1 of 2: October 6 lineup">
+            <h1 class="sr-only">Boathouse Beers — tonight’s lineup</h1>
+            <a href="assets/lineup-2026-10-06.svg?v=20261006-bosox" target="_blank" rel="noopener" aria-label="Open tonight’s lineup full size">
+              <img src="assets/lineup-2026-10-06.svg?v=20261006-bosox" alt="Boathouse Beers lineup for October 6, 2026: home vs. Pearl St Pirates by Swell, 8:10 PM at Arnerich Field, Upper Washington Park." width="1080" height="1620" fetchpriority="high" />
+            </a>
+          </article>
+          <article class="featured-slide hero" data-featured-slide aria-roledescription="slide" aria-label="2 of 2: 2026 championship" aria-hidden="true" inert>
+            <div class="hero-image" role="img" aria-label="The 2026 Boathouse Beers championship team"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <div class="eyebrow">Washington Park C · Men’s Lower</div>
+              <h2 class="featured-champ-title">2026<br /><em>Champions</em></h2>
+              <p>The Boathouse Beers return for the Fall 2026 season at Upper Washington Park in Alameda, California.</p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#season">View championship recap</a>
+                <a class="button button-ghost" href="#schedule">See the schedule</a>
+              </div>
+            </div>
+          </article>
         </div>
-      </section>
-
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-image" role="img" aria-label="The 2026 Boathouse Beers championship team"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <div class="eyebrow">Washington Park C · Men’s Lower</div>
-          <h1 id="hero-title">2026<br /><em>Champions</em></h1>
-          <p>
-            The Boathouse Beers return for the Fall 2026 season at Upper
-            Washington Park in Alameda, California.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#schedule">See the schedule</a>
-            <a class="button button-ghost" href="#roster">Meet the team</a>
+        <div class="featured-controls">
+          <button type="button" data-featured-prev aria-label="Previous featured slide">←</button>
+          <div class="featured-dots" aria-label="Choose a featured slide">
+            <button type="button" data-featured-dot="0" aria-label="Show tonight’s lineup" aria-current="true"><span></span></button>
+            <button type="button" data-featured-dot="1" aria-label="Show 2026 championship"><span></span></button>
           </div>
+          <span class="featured-label" data-featured-label aria-live="off">Tonight’s lineup · 1 / 2</span>
+          <button type="button" class="featured-pause" data-featured-pause aria-label="Pause automatic slideshow" aria-pressed="false">Pause</button>
+          <button type="button" data-featured-next aria-label="Next featured slide">→</button>
         </div>
-        <a class="scroll-cue" href="#fall-recaps" aria-label="Scroll to Fall 2026 game recaps">
-          <span>Scroll</span>
-          <span aria-hidden="true">↓</span>
-        </a>
+        <span class="sr-only" data-featured-status role="status"></span>
       </section>
 
       <section class="score-strip" aria-label="Fall 2026 season stats">
@@ -1316,5 +1357,73 @@
     </dialog>
 
     <script src="script.js?v=20260921-2"></script>
+    <script>
+      (() => {
+        const carousel = document.querySelector('.featured-carousel');
+        if (!carousel) return;
+        const slides = [...carousel.querySelectorAll('[data-featured-slide]')];
+        const dots = [...carousel.querySelectorAll('[data-featured-dot]')];
+        const pause = carousel.querySelector('[data-featured-pause]');
+        const label = carousel.querySelector('[data-featured-label]');
+        const status = carousel.querySelector('[data-featured-status]');
+        const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const names = ['Tonight’s lineup', '2026 championship'];
+        let active = 0, timer, paused = motion.matches, hovered = false, inView = true, touchStart = null;
+        function schedule() {
+          clearTimeout(timer);
+          if (!paused && !hovered && inView && !document.hidden && !carousel.contains(document.activeElement)) {
+            timer = setTimeout(() => { show(active + 1); schedule(); }, 7000);
+          }
+        }
+        function show(index, announce = false) {
+          active = (index + slides.length) % slides.length;
+          slides.forEach((slide, i) => {
+            slide.classList.toggle('is-active', i === active);
+            slide.setAttribute('aria-hidden', String(i !== active));
+            slide.inert = i !== active;
+          });
+          dots.forEach((dot, i) => i === active ? dot.setAttribute('aria-current', 'true') : dot.removeAttribute('aria-current'));
+          label.textContent = names[active] + ' · ' + (active + 1) + ' / ' + slides.length;
+          if (announce) status.textContent = names[active] + ', slide ' + (active + 1) + ' of ' + slides.length;
+        }
+        function manual(index) { show(index, true); schedule(); }
+        function updatePause() {
+          pause.textContent = paused ? 'Play' : 'Pause';
+          pause.setAttribute('aria-label', paused ? 'Start automatic slideshow' : 'Pause automatic slideshow');
+          pause.setAttribute('aria-pressed', String(paused));
+          schedule();
+        }
+        carousel.querySelector('[data-featured-prev]').addEventListener('click', () => manual(active - 1));
+        carousel.querySelector('[data-featured-next]').addEventListener('click', () => manual(active + 1));
+        dots.forEach((dot, i) => dot.addEventListener('click', () => manual(i)));
+        pause.addEventListener('click', () => { paused = !paused; updatePause(); });
+        carousel.addEventListener('keydown', event => {
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault(); manual(active + (event.key === 'ArrowLeft' ? -1 : 1));
+          }
+        });
+        carousel.addEventListener('mouseenter', () => { hovered = true; schedule(); });
+        carousel.addEventListener('mouseleave', () => { hovered = false; schedule(); });
+        carousel.addEventListener('focusin', schedule);
+        carousel.addEventListener('focusout', () => setTimeout(schedule, 0));
+        const stage = carousel.querySelector('.featured-stage');
+        stage.addEventListener('touchstart', event => { touchStart = { x:event.touches[0].clientX, y:event.touches[0].clientY }; clearTimeout(timer); }, { passive:true });
+        stage.addEventListener('touchend', event => {
+          if (!touchStart) return;
+          const dx = event.changedTouches[0].clientX - touchStart.x;
+          const dy = event.changedTouches[0].clientY - touchStart.y;
+          touchStart = null;
+          if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) manual(active + (dx < 0 ? 1 : -1));
+          else schedule();
+        }, { passive:true });
+        stage.addEventListener('touchcancel', () => { touchStart = null; schedule(); }, { passive:true });
+        document.addEventListener('visibilitychange', schedule);
+        motion.addEventListener('change', event => { paused = event.matches; updatePause(); });
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(entries => { inView = entries[0].isIntersecting; schedule(); }, { threshold:.15 }).observe(carousel);
+        }
+        show(0); updatePause();
+      })();
+    </script>
   </body>
 </html>
