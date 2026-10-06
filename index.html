@@ -63,6 +63,29 @@
         .featured-label { order:5; flex-basis:100%; text-align:center; }
       }
       @media (prefers-reduced-motion:reduce) { .featured-slide { transition:none; } }
+
+      /* Welcome slide: Softball Beers brand introduction. */
+      .featured-welcome { display:grid; align-items:center; background:radial-gradient(ellipse at 78% 48%,#142d4b 0%,#071426 52%,#040b14 100%); color:var(--cream); }
+      .welcome-inner { width:min(1180px,calc(100% - 96px)); margin:auto; display:grid; grid-template-columns:1.35fr 1fr; align-items:center; gap:32px; }
+      .welcome-copy { min-width:0; }
+      .welcome-title { margin:0; color:#d9232e; font:900 clamp(5rem,9.5vw,9rem)/.88 var(--display); letter-spacing:-.025em; text-transform:uppercase; -webkit-text-stroke:2px var(--cream); paint-order:stroke fill; }
+      .welcome-title span { display:block; }
+      .welcome-rule { width:72px; height:4px; margin:32px 0 24px; background:var(--red); }
+      .welcome-home { margin:0 0 14px; font:600 clamp(1.3rem,2.5vw,2rem)/1.3 var(--body); color:var(--cream); }
+      .welcome-home strong { display:block; font:800 clamp(2rem,4vw,3.25rem)/1.1 var(--display); margin-top:4px; }
+      .welcome-location { margin:0; color:var(--cream); font-size:clamp(.9rem,1.4vw,1.05rem); line-height:1.7; }
+      .welcome-logo { display:block; width:100%; max-width:430px; max-height:600px; object-fit:contain; justify-self:center; filter:drop-shadow(0 20px 26px rgba(0,0,0,.3)); }
+      @media (max-width:700px) {
+        .welcome-inner { width:calc(100% - 40px); grid-template-columns:1fr; gap:22px; text-align:center; padding:24px 0; }
+        .welcome-logo { grid-row:1; width:clamp(160px,42vw,250px); max-height:285px; }
+        .welcome-title { font-size:clamp(3.8rem,17vw,6rem); -webkit-text-stroke:1.5px var(--cream); }
+        .welcome-title span { display:inline; }
+        .welcome-title span + span::before { content:" "; }
+        .welcome-rule { margin:20px auto 16px; width:54px; height:3px; }
+        .welcome-home { font-size:1rem; margin-bottom:10px; }
+        .welcome-home strong { font-size:clamp(1.8rem,8vw,2.5rem); }
+        .welcome-location { font-size:.8rem; }
+      }
     </style>
     <style id="fall-recap-archive-styles">
       .fall-game-archive { margin-top:1.25rem; border:1px solid rgba(7,20,38,.14); border-radius:20px; background:#fff; overflow:hidden; }
@@ -119,13 +142,24 @@
       <!-- Homepage features: add a slide and its matching dot for future promotions. -->
       <section class="featured-carousel" aria-roledescription="carousel" aria-label="Featured Beers updates" tabindex="0">
         <div class="featured-stage">
-          <article class="featured-slide featured-lineup is-active" data-featured-slide aria-roledescription="slide" aria-label="1 of 2: October 6 lineup">
-            <h1 class="sr-only">Boathouse Beers — tonight’s lineup</h1>
+          <article class="featured-slide featured-welcome is-active" data-featured-slide aria-roledescription="slide" aria-label="1 of 3: Welcome to Softball Beers">
+            <div class="welcome-inner">
+              <div class="welcome-copy">
+                <h1 class="welcome-title"><span>Softball</span> <span>Beers</span></h1>
+                <div class="welcome-rule" aria-hidden="true"></div>
+                <p class="welcome-home">Home of the <strong>Boathouse Beers</strong></p>
+                <p class="welcome-location">Alameda, California <span aria-hidden="true">•</span> Slow-Pitch Softball</p>
+              </div>
+              <img class="welcome-logo" src="assets/softball-beers-can-logo.png" alt="Softball Beers beer-can logo with softball stitching, crossed bats and clinking beers" width="1254" height="1254" fetchpriority="high" />
+            </div>
+          </article>
+          <article class="featured-slide featured-lineup" data-featured-slide aria-roledescription="slide" aria-label="2 of 3: October 6 lineup" aria-hidden="true" inert>
+            <h2 class="sr-only">Boathouse Beers — tonight’s lineup</h2>
             <a href="assets/lineup-2026-10-06.svg?v=20261006-bosox" target="_blank" rel="noopener" aria-label="Open tonight’s lineup full size">
-              <img src="assets/lineup-2026-10-06.svg?v=20261006-bosox" alt="Boathouse Beers lineup for October 6, 2026: home vs. Pearl St Pirates by Swell, 8:10 PM at Arnerich Field, Upper Washington Park." width="1080" height="1620" fetchpriority="high" />
+              <img src="assets/lineup-2026-10-06.svg?v=20261006-bosox" alt="Boathouse Beers lineup for October 6, 2026: home vs. Pearl St Pirates by Swell, 8:10 PM at Arnerich Field, Upper Washington Park." width="1080" height="1620" />
             </a>
           </article>
-          <article class="featured-slide hero" data-featured-slide aria-roledescription="slide" aria-label="2 of 2: 2026 championship" aria-hidden="true" inert>
+          <article class="featured-slide hero" data-featured-slide aria-roledescription="slide" aria-label="3 of 3: 2026 championship" aria-hidden="true" inert>
             <div class="hero-image" role="img" aria-label="The 2026 Boathouse Beers championship team"></div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -142,10 +176,11 @@
         <div class="featured-controls">
           <button type="button" data-featured-prev aria-label="Previous featured slide">←</button>
           <div class="featured-dots" aria-label="Choose a featured slide">
-            <button type="button" data-featured-dot="0" aria-label="Show tonight’s lineup" aria-current="true"><span></span></button>
-            <button type="button" data-featured-dot="1" aria-label="Show 2026 championship"><span></span></button>
+            <button type="button" data-featured-dot="0" aria-label="Show Softball Beers welcome" aria-current="true"><span></span></button>
+            <button type="button" data-featured-dot="1" aria-label="Show tonight’s lineup"><span></span></button>
+            <button type="button" data-featured-dot="2" aria-label="Show 2026 championship"><span></span></button>
           </div>
-          <span class="featured-label" data-featured-label aria-live="off">Tonight’s lineup · 1 / 2</span>
+          <span class="featured-label" data-featured-label aria-live="off">Welcome to Softball Beers · 1 / 3</span>
           <button type="button" class="featured-pause" data-featured-pause aria-label="Pause automatic slideshow" aria-pressed="false">Pause</button>
           <button type="button" data-featured-next aria-label="Next featured slide">→</button>
         </div>
@@ -1388,7 +1423,7 @@
         const label = carousel.querySelector('[data-featured-label]');
         const status = carousel.querySelector('[data-featured-status]');
         const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const names = ['Tonight’s lineup', '2026 championship'];
+        const names = ['Welcome to Softball Beers', 'Tonight’s lineup', '2026 championship'];
         let active = 0, timer, paused = motion.matches, hovered = false, inView = true, touchStart = null;
         function schedule() {
           clearTimeout(timer);
