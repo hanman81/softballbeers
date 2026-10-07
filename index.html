@@ -100,6 +100,32 @@
       .fall-game-archive > .game-recap-grid { padding:clamp(1rem,2.5vw,2rem); border-top:1px solid rgba(7,20,38,.12); background:#f8f5ee; }
       @media (prefers-reduced-motion:reduce) { .fall-archive-icon { transition:none; } }
     </style>
+    <style id="mobile-season-stats-styles">
+      @media (max-width: 600px) {
+        .score-strip { grid-template-columns: minmax(0, 1fr); }
+        .score-strip > div {
+          min-width: 0;
+          flex-direction: column;
+          flex-wrap: nowrap !important;
+          align-items: center;
+          gap: .5rem;
+          padding: 1.5rem 1rem;
+          border-right: 0;
+          border-bottom: 1px solid rgba(255, 255, 255, .18);
+          text-align: center;
+        }
+        .score-strip > div:last-child { border-bottom: 0; }
+        .score-strip small {
+          flex-basis: auto !important;
+          width: 100%;
+          max-width: 32ch;
+          margin-top: .25rem;
+          font-size: .8rem !important;
+          line-height: 1.6;
+          overflow-wrap: anywhere;
+        }
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -198,13 +224,8 @@
         <div class="section-heading split-heading">
           <div>
             <span class="section-number">01</span>
-            <p class="eyebrow dark">Fall 2026 · Game stories</p>
-            <h2 id="fall-recaps-title">Latest game.</h2>
+            <p id="fall-recaps-title" class="eyebrow dark">Fall 2026 · Game stories</p>
           </div>
-          <p class="lead">
-            The latest from the Beers, drawn from Shania’s official scorebook.
-            Expand earlier games below for past recaps, scorebooks and stats.
-          </p>
         </div>
 
         <div class="latest-game-recap">
