@@ -31,9 +31,9 @@
       .featured-stage { position:relative; height:clamp(560px, calc(100svh - 146px), 840px); overflow:hidden; touch-action:pan-y; }
       .featured-slide { position:absolute; inset:0; opacity:0; visibility:hidden; transition:opacity 450ms ease; }
       .featured-slide.is-active { opacity:1; visibility:visible; }
-      .featured-lineup { display:grid; place-items:center; padding:16px; background:radial-gradient(ellipse at center,#122a46,#06101f 72%); }
-      .featured-lineup > a { display:block; height:100%; max-width:100%; aspect-ratio:2 / 3; min-height:0; }
-      .featured-lineup img { width:100%; height:100%; object-fit:contain; border-radius:12px; box-shadow:0 16px 44px rgba(0,0,0,.38); }
+      .featured-preview { display:grid; place-items:center; padding:16px; background:radial-gradient(ellipse at center,#122a46,#06101f 72%); }
+      .featured-preview > a { display:block; width:100%; height:100%; min-width:0; min-height:0; }
+      .featured-preview img { width:100%; height:100%; object-fit:contain; border-radius:12px; box-shadow:0 16px 44px rgba(0,0,0,.38); }
       .featured-stage .hero { min-height:0; padding-top:0; display:grid; align-items:end; }
       .featured-stage .hero-image { inset:0; height:100%; background-size:cover; background-position:center 72%; }
       .featured-stage .hero-overlay { inset:0; height:100%; }
@@ -179,10 +179,10 @@
               <img class="welcome-logo" src="assets/softball-beers-welcome-transparent.png?v=20261006" alt="Softball Beers logo with red lettering and a yellow beer can with softball stitching" width="1122" height="1402" fetchpriority="high" />
             </div>
           </article>
-          <article class="featured-slide featured-lineup" data-featured-slide aria-roledescription="slide" aria-label="2 of 3: October 6 lineup" aria-hidden="true" inert>
-            <h2 class="sr-only">Boathouse Beers — tonight’s lineup</h2>
-            <a href="assets/lineup-2026-10-06.svg?v=20261006-kevin" target="_blank" rel="noopener" aria-label="Open tonight’s lineup full size">
-              <img src="assets/lineup-2026-10-06.svg?v=20261006-kevin" alt="Boathouse Beers lineup for October 6, 2026: home vs. Pearl St Pirates by Swell, 8:10 PM at Arnerich Field, Upper Washington Park." width="1080" height="1620" />
+          <article class="featured-slide featured-preview" data-featured-slide aria-roledescription="slide" aria-label="2 of 3: October 13 game preview" aria-hidden="true" inert>
+            <h2 class="sr-only">Week 9 game preview — Boathouse Beers vs. Inglorious Batters</h2>
+            <a href="assets/game-preview-2026-10-13.webp?v=20261007" target="_blank" rel="noopener" aria-label="Open October 13 game preview full size">
+              <img src="assets/game-preview-2026-10-13.webp?v=20261007" alt="Week 9: 4th-place Boathouse Beers (2–4) vs. 5th-place Inglorious Batters (0–7). Tuesday, October 13 at 8:10 PM, Arnerich Field, Upper Washington Park, Alameda. 90 beers due: Chris 30, Dan 30, Eric 30. Bring the bats. Bring the beers." width="1536" height="1024" />
             </a>
           </article>
           <article class="featured-slide hero" data-featured-slide aria-roledescription="slide" aria-label="3 of 3: 2026 championship" aria-hidden="true" inert>
@@ -203,7 +203,7 @@
           <button type="button" data-featured-prev aria-label="Previous featured slide">←</button>
           <div class="featured-dots" aria-label="Choose a featured slide">
             <button type="button" data-featured-dot="0" aria-label="Show Softball Beers welcome" aria-current="true"><span></span></button>
-            <button type="button" data-featured-dot="1" aria-label="Show tonight’s lineup"><span></span></button>
+            <button type="button" data-featured-dot="1" aria-label="Show October 13 game preview"><span></span></button>
             <button type="button" data-featured-dot="2" aria-label="Show 2026 championship"><span></span></button>
           </div>
           <span class="featured-label" data-featured-label aria-live="off">Welcome to Softball Beers · 1 / 3</span>
@@ -1483,7 +1483,7 @@
         const label = carousel.querySelector('[data-featured-label]');
         const status = carousel.querySelector('[data-featured-status]');
         const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const names = ['Welcome to Softball Beers', 'Tonight’s lineup', '2026 championship'];
+        const names = ['Welcome to Softball Beers', 'October 13 game preview', '2026 championship'];
         let active = 0, timer, paused = motion.matches, hovered = false, inView = true, touchStart = null;
         function schedule() {
           clearTimeout(timer);
