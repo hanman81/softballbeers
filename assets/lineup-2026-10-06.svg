@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1620" role="img" aria-labelledby="title desc">
 <title id="title">Boathouse Beers lineup vs Pearl St Pirates by Swell, October 6, 2026</title>
-<desc id="desc">Home vs Pearl St Pirates by Swell, October 6, 2026 at 8:10 PM, Arnerich Field, Upper Washington Park. Batting order: Eric Greene SS, Sean Hanley RC, Justin Green 2B, Ryan Mendoza LC, Chris Pereira P, Mike Ginsburg 3B, Shane McDermott 1B, Jesse Wright LF, Jeffrey Mena RF, Dan Grossman C.</desc>
+<desc id="desc">Home vs Pearl St Pirates by Swell, October 6, 2026 at 8:10 PM, Arnerich Field, Upper Washington Park. Batting order: Eric Greene SS, Sean Hanley RC, Justin Green 2B, Ryan Mendoza LC, Mike Ginsburg 3B, Shane McDermott 1B, Jesse Wright LF, Jeffrey Mena RF, Dan Grossman C, Kevin (substitute) P.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#020814"/></linearGradient>
   <linearGradient id="red" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c82026"/><stop offset="1" stop-color="#8c1117"/></linearGradient>
@@ -39,12 +39,12 @@
     <g transform="translate(0 152)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">2</text><text x="175" y="48">SEAN HANLEY</text><text x="850" y="48" text-anchor="middle">RC</text></g>
     <g transform="translate(0 222)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">3</text><text x="175" y="48">JUSTIN GREEN</text><text x="850" y="48" text-anchor="middle">2B</text></g>
     <g transform="translate(0 292)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">4</text><text x="175" y="48">RYAN MENDOZA</text><text x="850" y="48" text-anchor="middle">LC</text></g>
-    <g transform="translate(0 362)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">5</text><text x="175" y="48">CHRIS PEREIRA</text><text x="850" y="48" text-anchor="middle">P</text></g>
-    <g transform="translate(0 432)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">6</text><text x="175" y="48">MIKE GINSBURG</text><text x="850" y="48" text-anchor="middle">3B</text></g>
-    <g transform="translate(0 502)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">7</text><text x="175" y="48">SHANE MCDERMOTT</text><text x="850" y="48" text-anchor="middle">1B</text></g>
-    <g transform="translate(0 572)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">8</text><text x="175" y="48">JESSE WRIGHT</text><text x="850" y="48" text-anchor="middle">LF</text></g>
-    <g transform="translate(0 642)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">9</text><text x="175" y="48">JEFFREY MENA</text><text x="850" y="48" text-anchor="middle">RF</text></g>
-    <g transform="translate(0 712)"><rect width="940" height="88" fill="#07182b"/><text x="55" y="54">10</text><text x="175" y="54">DAN GROSSMAN</text><text x="850" y="54" text-anchor="middle">C</text></g>
+    <g transform="translate(0 362)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">5</text><text x="175" y="48">MIKE GINSBURG</text><text x="850" y="48" text-anchor="middle">3B</text></g>
+    <g transform="translate(0 432)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">6</text><text x="175" y="48">SHANE MCDERMOTT</text><text x="850" y="48" text-anchor="middle">1B</text></g>
+    <g transform="translate(0 502)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">7</text><text x="175" y="48">JESSE WRIGHT</text><text x="850" y="48" text-anchor="middle">LF</text></g>
+    <g transform="translate(0 572)"><rect width="940" height="70" fill="#07182b"/><text x="55" y="48">8</text><text x="175" y="48">JEFFREY MENA</text><text x="850" y="48" text-anchor="middle">RF</text></g>
+    <g transform="translate(0 642)"><rect width="940" height="70" fill="#0b1f38"/><text x="55" y="48">9</text><text x="175" y="48">DAN GROSSMAN</text><text x="850" y="48" text-anchor="middle">C</text></g>
+    <g transform="translate(0 712)"><rect width="940" height="88" fill="#07182b"/><text x="55" y="54">10</text><text x="175" y="54">KEVIN (SUB)</text><text x="850" y="54" text-anchor="middle">P</text></g>
   </g>
 </g>
 <g transform="translate(70 1490)">
