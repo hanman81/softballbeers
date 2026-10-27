@@ -168,7 +168,7 @@
       <!-- Homepage features: add a slide and its matching dot for future promotions. -->
       <section class="featured-carousel" aria-roledescription="carousel" aria-label="Featured Beers updates" tabindex="0">
         <div class="featured-stage">
-          <article class="featured-slide featured-welcome is-active" data-featured-slide aria-roledescription="slide" aria-label="1 of 2: Welcome to Softball Beers">
+          <article class="featured-slide featured-welcome is-active" data-featured-slide aria-roledescription="slide" aria-label="1 of 4: Welcome to Softball Beers">
             <div class="welcome-inner">
               <div class="welcome-copy">
                 <h1 class="sr-only">Softball Beers — Home of the Boathouse Beers</h1>
@@ -179,7 +179,17 @@
               <img class="welcome-logo" src="assets/softball-beers-welcome-transparent.png?v=20261006" alt="Softball Beers logo with red lettering and a yellow beer can with softball stitching" width="1122" height="1402" fetchpriority="high" />
             </div>
           </article>
-          <article class="featured-slide hero" data-featured-slide aria-roledescription="slide" aria-label="2 of 2: 2026 championship" aria-hidden="true" inert>
+          <article class="featured-slide featured-preview" data-featured-slide aria-roledescription="slide" aria-label="2 of 4: October 27 playoff lineup" aria-hidden="true" inert>
+            <a href="assets/playoff-lineup-2026-10-27.png" target="_blank" rel="noopener" aria-label="Open the playoff lineup full size: October 27 at 7:40 PM versus Dusty Ol’ Mitts at Arnerich Field, Upper Washington Park">
+              <img src="assets/playoff-lineup-2026-10-27.png" alt="Boathouse Beers playoff lineup: 1 Chris Pereira P; 2 Sean Hanley LC; 3 Justin Green 3B; 4 Ryan Mendoza 2B; 5 Eric Greene SS; 6 Shane McDermott 1B; 7 Jesse Wright LF; 8 Jeffrey Mena RC; 9 Dan Grossman RF; 10 Jeremy Wright C. Fourth-seed Beers versus first-seed Dusty Ol’ Mitts, Tuesday October 27 at 7:40 PM, Arnerich Field, Upper Washington Park, Alameda. Win and advance to the championship at 8:50 PM." width="1672" height="941" loading="eager" />
+            </a>
+          </article>
+          <article class="featured-slide featured-preview" data-featured-slide aria-roledescription="slide" aria-label="3 of 4: Fall 2026 regular-season recap" aria-hidden="true" inert>
+            <a href="assets/fall-2026-regular-season-recap.png" target="_blank" rel="noopener" aria-label="Open the Fall 2026 regular-season recap full size">
+              <img src="assets/fall-2026-regular-season-recap.png" alt="Boathouse Beers Fall 2026 regular season: 3–5 record, fourth place in Men’s Upper. Batting leaders: Justin Green .750 average; Sean Hanley and Jeffrey Mena tied with 23 hits; Sean Hanley 8 doubles and 20 runs. Can flip leaders: Jeffrey Mena and Mike Ginsburg, 2 each." width="1672" height="941" loading="eager" />
+            </a>
+          </article>
+          <article class="featured-slide hero" data-featured-slide aria-roledescription="slide" aria-label="4 of 4: 2026 championship" aria-hidden="true" inert>
             <div class="hero-image" role="img" aria-label="The 2026 Boathouse Beers championship team"></div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -197,9 +207,11 @@
           <button type="button" data-featured-prev aria-label="Previous featured slide">←</button>
           <div class="featured-dots" aria-label="Choose a featured slide">
             <button type="button" data-featured-dot="0" aria-label="Show Softball Beers welcome" aria-current="true"><span></span></button>
-            <button type="button" data-featured-dot="1" aria-label="Show 2026 championship"><span></span></button>
+            <button type="button" data-featured-dot="1" aria-label="Show October 27 playoff lineup"><span></span></button>
+            <button type="button" data-featured-dot="2" aria-label="Show Fall 2026 regular-season recap"><span></span></button>
+            <button type="button" data-featured-dot="3" aria-label="Show 2026 championship"><span></span></button>
           </div>
-          <span class="featured-label" data-featured-label aria-live="off">Welcome to Softball Beers · 1 / 2</span>
+          <span class="featured-label" data-featured-label aria-live="off">Welcome to Softball Beers · 1 / 4</span>
           <button type="button" class="featured-pause" data-featured-pause aria-label="Pause automatic slideshow" aria-pressed="false">Pause</button>
           <button type="button" data-featured-next aria-label="Next featured slide">→</button>
         </div>
@@ -1553,7 +1565,7 @@
         const label = carousel.querySelector('[data-featured-label]');
         const status = carousel.querySelector('[data-featured-status]');
         const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const names = ['Welcome to Softball Beers', '2026 championship'];
+        const names = ['Welcome to Softball Beers', 'October 27 playoff lineup', 'Fall 2026 regular-season recap', '2026 championship'];
         let active = 0, timer, paused = motion.matches, hovered = false, inView = true, touchStart = null;
         function schedule() {
           clearTimeout(timer);
